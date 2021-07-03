@@ -1,10 +1,13 @@
 import GlobalStyle from './assets/styles/global';
+import {BrowserRouter} from 'react-router-dom';
+import Routes from './routes';
+
 function App() {
   return (
-    <>
-    <h1>hi</h1>
-    <GlobalStyle/>
-    </>
+  <BrowserRouter>
+    <Routes/>
+    <GlobalStyle />
+  </BrowserRouter>    
   );
 }
 
