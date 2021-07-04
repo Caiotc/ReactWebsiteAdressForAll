@@ -2,15 +2,16 @@ import styled from 'styled-components'
 
 export const NavbarContainer = styled.div`
     width: 100%;
-    height: 10%;
-    padding: 2%0%2%0%;
+    height: 150px;
+    padding: 2% 0% 2% 0%;
     background-color: #0B64E1;
 `;
 export const NavbarLogo = styled.div`
-    width: 10%;
+    width: 150px;
     height: 100%;
     margin-left: 5%;
     float: left;
+    background-color: red;
 
 `;
 export const NavbarContent = styled.div`
