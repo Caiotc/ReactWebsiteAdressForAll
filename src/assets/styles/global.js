@@ -5,18 +5,18 @@ export default createGlobalStyle`
   *{
     margin: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
     outline: 0;
+    font-family: 'Arial', serif;
   }
 
   body{
-    background: #312E38;
+    background: #fff;
     color: #fff;
     -webkit-font-smoothing: antialiased;
   }
 
   body, input, button{
-    font-family: 'Roboto Slab', serif;
     font-size: 16px;
   }
 
