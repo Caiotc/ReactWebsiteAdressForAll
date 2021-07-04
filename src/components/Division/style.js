@@ -10,6 +10,7 @@ export const DivisionContainer = styled.div`
     align-items:center;
     margin: 100px;
     margin-left: 0;
+    margin-right: 0;
 `;
 
 export const DivisionContent = styled.div`

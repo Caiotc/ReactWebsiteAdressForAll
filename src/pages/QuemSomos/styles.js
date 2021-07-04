@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 
 export const PageBodyContainer = styled.div`
-    width: 100%;
-    background-color: #fff;
+
+`;
+export const WhoWeAreSection = styled.div`
+    margin: 3em;
+    padding: 3em;
     display: flex;
     flex-direction: column;
-    align-items: center;
 `;
-
 export const HomeSection = styled.section`
     display: flex;
     flex:1;
