@@ -2,13 +2,14 @@ import styled from 'styled-components'
 
 export const DivisionContainer = styled.div`
     width: 100%;
-    height: 300px;
+    height: 35%;
     padding: 2% 0% 2% 0%;
     background-color: #0B64E1;
     display:flex;
     justify-content:center;
     align-items:center;
     margin: 100px;
+    margin-left: 0;
 `;
 
 export const DivisionContent = styled.div`
@@ -41,6 +42,8 @@ export const Description = styled.h1`
     font-weight: 500;
     font-size: 25px;
     line-height: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 2em;
+    margin-top: 2em;
+
 `;
 

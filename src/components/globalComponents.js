@@ -19,17 +19,18 @@ export const Description = styled.div`
     font-size: 30px;
     line-height: 35px;
     color: #544837;
+    margin-bottom: 2em;
 `;
 
 export const DarkBlueButton = styled.button`
+    width: 50%;
+    padding: 3%;
+    border: 0px;
+    border-color: #0B64E1;
     background-color: #0B64E1;
-    height: 60px;
-    width: 270px;
-    border:none;
-    border-radius: 4px;
-    color:#fff;
-    font-size: 16px;
-    font-weight: 800px;
+    color: #FFFFFF;
+    font-size: 15px;
+    line-height: 1.5em;
     text-align: center;
 `;
 

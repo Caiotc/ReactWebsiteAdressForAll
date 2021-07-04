@@ -50,8 +50,7 @@ function QuemSomos() {
       <SubTitle>Nossos Projetos</SubTitle>
       <Description>Associados e terceiros atuando como corpo técnico do Instituto.</Description>
       <Title>CARDS</Title>
-
-      <Footer/>
+      
     </PageBodyContainer> 
   );
 }

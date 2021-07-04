@@ -43,7 +43,8 @@ export const LocationsSection = styled.div`
     height: 180px;
     justify-content: center;
     align-items: center;
-    background-color: #0B64E1;  
+    background-color: #0B64E1;
+    margin-top: 2em;
     margin-bottom: 100px;
 `;
 
