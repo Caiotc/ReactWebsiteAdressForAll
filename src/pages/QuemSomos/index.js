@@ -1,28 +1,31 @@
+import Carousel from 'react-elastic-carousel'
+
 import {
   Title,
   SubTitle,
   Description,
-  DarkBlueButton
 } from '../../components/globalComponents'
 
 import {
   PageBodyContainer,
-  HomeSection,
-  Play,
-  PictureContainer,
-  Picture,
-  LocationsSection,
-  LocationsContainer,
-  Location,
-  Newsletter,
-  WhoWeAreSection
+  WhoWeAreSection,
+  ImgContainer,
+  MemberImg,
+  PartnerImg,
+  ProjectCardsContainer,
+  ProjectCard,
+  ProjectCardContent,
+  ProjectImg,
+  ProjectTitle,
+  ProjectDescription,
+  ProjectButton
 } from './styles'
 
 import Division from '../../components/Division'
-import Footer from '../../components/Footer'
+
+import logo from '../../assets/images/logo.png'
 
 
-import player from '../../assets/images/player.png'
 
 function QuemSomos() {
   return (  
@@ -51,34 +54,88 @@ function QuemSomos() {
         <SubTitle>Conselho Consultivo</SubTitle>
         <br></br>
       <Description>O Conselho consultivo é constituído por membros efetivos e honorários de notória competência e reputação em suas áreas, e norteia a atuação do Instituto.</Description>      
+      <ImgContainer>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+        </ImgContainer>
       </WhoWeAreSection>
       
       <WhoWeAreSection>
-        <Title>CARROÇA</Title>
         <SubTitle>Diretoria Executiva</SubTitle>
         <br></br>
         <Description>Associados efetivos eleitos.</Description>
+        <ImgContainer>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+        </ImgContainer>
       </WhoWeAreSection>
       
       <WhoWeAreSection>
-        <Title>CARROÇA</Title>
         <SubTitle>Conselho Técnico</SubTitle>
         <br></br>
         <Description>Associados e terceiros atuando como corpo técnico do Instituto.</Description>
+        <ImgContainer>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+        </ImgContainer>
       </WhoWeAreSection>
       
       <WhoWeAreSection>
-        <Title>CARROÇA</Title>
         <SubTitle>Parceiros</SubTitle>
+        <Carousel itemsToShow={4} pagination={false} style={{marginTop:'30px'}}>
+          <PartnerImg src={logo} alt={'Parceiro'}/>
+          <PartnerImg src={logo} alt={'Parceiro'}/>
+          <PartnerImg src={logo} alt={'Parceiro'}/>
+          <PartnerImg src={logo} alt={'Parceiro'}/>
+          <PartnerImg src={logo} alt={'Parceiro'}/>
+        </Carousel>
       </WhoWeAreSection>
       
-      <Title>CARROÇA</Title>
 
       <Division description={'No link abaixo você pode consultar uma versão resumida de nosso estatuto social, bem como acessar as diversas versões de nosso estatuto em inteiro teor.'} buttonText={'Página do Estatuto'} buttonType={'Light'}/>
       <WhoWeAreSection>
         <SubTitle>Nossos Projetos</SubTitle>
         <br></br>
-        <Description>Associados e terceiros atuando como corpo técnico do Instituto.</Description>
+        <Description>o Projeto AddressForAll é um dos vários projetos mantidos pelo Instituto. Confira abaixo os projetos ligados a endereços.</Description>
+        <ProjectCardsContainer>
+          <ProjectCard>
+            <ProjectImg src={logo} alt={'Parceiro'}/>
+            <ProjectTitle>AddressForAll - Endereço para Todos</ProjectTitle>
+            <ProjectDescription>Este foi o primeiro projeto do instituto. O projeto mantém uma base de endereços colaborativa e aberta.</ProjectDescription>
+            <ProjectButton href={'#'}>Voltar para Homepage</ProjectButton>
+          </ProjectCard>
+          <ProjectCard>
+            <ProjectImg src={logo} alt={'Parceiro'}/>
+            <ProjectTitle>CRP - Código de Roteamento Postal</ProjectTitle>
+            <ProjectDescription>O CEP é privado? O CRP contorna legalmente esta incoerência.</ProjectDescription>
+            <ProjectButton href={'#'}>Voltar para Homepage</ProjectButton>
+          </ProjectCard>
+          <ProjectCard>
+              <ProjectImg src={logo} alt={'Parceiro'}/>
+              <ProjectTitle>OSM.code - Localização por Geocódigos</ProjectTitle>
+              <ProjectDescription>Seres humanos tem dificuldade em decorar latitude/longitude. O Geocode cria um código curto, fácil de lembrar para apontar uma área de 4M X 4M.</ProjectDescription>
+              <ProjectButton href={'#'}>Voltar para Homepage</ProjectButton>
+          </ProjectCard>
+          <ProjectCard>
+            <ProjectImg src={logo} alt={'Parceiro'}/>
+            <ProjectTitle>Preservação Digital</ProjectTitle>
+            <ProjectDescription>Preservarmos por décadas dados que governos perdem facilmente.</ProjectDescription>
+            <ProjectButton href={'#'}>Voltar para Homepage</ProjectButton>
+          </ProjectCard>
+          <ProjectCard>
+            <ProjectImg src={logo} alt={'Parceiro'}/>
+            <ProjectTitle>Governo GeoDigital</ProjectTitle>
+            <ProjectDescription>Conscientizar os governos da importância da geografia nos serviços digitais e ajuda-los.</ProjectDescription>
+            <ProjectButton href={'#'}>Voltar para Homepage</ProjectButton>
+          </ProjectCard>
+        </ProjectCardsContainer>
       </WhoWeAreSection>
 
       

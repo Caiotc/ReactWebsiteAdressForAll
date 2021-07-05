@@ -18,7 +18,6 @@ import {
 } from './styles'
 
 import Division from '../../components/Division'
-import Footer from '../../components/Footer'
 
 
 import player from '../../assets/images/player.png'
@@ -84,7 +83,6 @@ function Home() {
         <Newsletter>Assine nossa newsletter</Newsletter>
       </HomeSection>
 
-      <Footer/>
     </PageBodyContainer> 
   );
 }
