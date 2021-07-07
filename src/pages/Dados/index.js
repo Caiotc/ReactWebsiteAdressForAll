@@ -3,10 +3,11 @@ import {
     Title,
     SubTitle,
     Description,
-    DarkBlueButton
+    DarkBlueButton,
+    Link
   } from '../../components/globalComponents'
 
-import {DataSection,DataPicture, DataLink,DataDescriptionImgSection,DataPictureDescription,DataPageContentContainer} from './style'
+import {DataSection,DataPicture,DataDescriptionImgSection,DataPictureDescription,DataPageContentContainer} from './style'
 import Division from '../../components/Division/index'
 import consolidados from '../../assets/images/Dados/consolidados.png'
 import filtrados01 from '../../assets/images/Dados/filtrados01.png'
@@ -30,7 +31,7 @@ function Dados(){
                       resultantes de cada uma dessas etapas. Para detalhes técnicos 
                       consulte a documentação:
                 </Description>
-                <DataLink href ="https://github.com/AddressForAll/">git.AddressForAll.org</DataLink>
+                <Link href ="https://github.com/AddressForAll/">git.AddressForAll.org</Link>
                 <DataPicture src={modelo02} >
 
                 </DataPicture>
@@ -46,9 +47,9 @@ function Dados(){
                   </Description>
                   <DataPictureDescription src={preservados}/>
                 </DataDescriptionImgSection>
-                <DataLink href='/'>API 01 - Encontre Fornecedores que já doaram dados</DataLink>
-                <DataLink href='/'>API 02 - Consulte Jurisdições (locais) que já receberam dados</DataLink>            
-                <DataLink href='/'>API 03 - Recupere pacotes de dados pelo hash</DataLink>                                        
+                <Link href='/'>API 01 - Encontre Fornecedores que já doaram dados</Link>
+                <Link href='/'>API 02 - Consulte Jurisdições (locais) que já receberam dados</Link>            
+                <Link href='/'>API 03 - Recupere pacotes de dados pelo hash</Link>                                        
               </DataSection>
               
               <DataSection>
@@ -65,8 +66,8 @@ function Dados(){
                   </Description>
                   <DataPictureDescription src={filtrados01}/>
                 </DataDescriptionImgSection>
-                <DataLink href='/'>API 04 - Dados organizados por Fornecedor ou Jurisdição (local)</DataLink>
-                <DataLink href='/'>API 05 - Confira se um endereço está entre os dados filtrados</DataLink>                                                
+                <Link href='/'>API 04 - Dados organizados por Fornecedor ou Jurisdição (local)</Link>
+                <Link href='/'>API 05 - Confira se um endereço está entre os dados filtrados</Link>                                                
               </DataSection>
 
               <DataSection>
@@ -87,8 +88,8 @@ function Dados(){
                   </Description>
                   <DataPictureDescription src={filtrados02}/>
                 </DataDescriptionImgSection>
-                <DataLink href='/'>API 06 - Buscar um endereço no banco de dados consolidados</DataLink>
-                <DataLink href='/'>API 07 - Ver serviços e APIs disponíveis</DataLink>                                                
+                <Link href='/'>API 06 - Buscar um endereço no banco de dados consolidados</Link>
+                <Link href='/'>API 07 - Ver serviços e APIs disponíveis</Link>                                                
               </DataSection>
 
               <Division description={`No link abaixo você pode acessar 

@@ -45,3 +45,11 @@ export const LightBlueButton = styled.button`
     font-weight: 800px;
     text-align: center;
 `;
+export const Link = styled.a`
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    color: #3CC5FF;
+    margin-bottom: 1em;
+    text-decoration: underline;
+`

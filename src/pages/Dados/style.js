@@ -23,10 +23,3 @@ export const DataPictureDescription = styled.img`
     height: 50%;
     padding: 10px;
 `;
-export const DataLink = styled.a`
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 35px;
-    color: #3CC5FF;
-    margin-bottom: 1em;
-`
