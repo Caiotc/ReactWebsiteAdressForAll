@@ -43,7 +43,7 @@ function CRP() {
             <Description>
                 Para detalhes técnicos consulte a documentação:
             </Description>
-                <Link>
+                <Link href="https://github.com/OSMBrasil/CRP">
                 github.com/OSMBrasil/CRP
                 </Link>  
         </CRPSection>

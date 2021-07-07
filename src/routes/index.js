@@ -6,6 +6,7 @@ import Dados from '../pages/Dados'
 import Contato from '../pages/Contato'
 import CRP from '../pages/CRP';
 import Preservacao from '../pages/Preservacao';
+import OSM from '../pages/OSM';
 
 
 const Routes = () =>(
@@ -15,7 +16,8 @@ const Routes = () =>(
         <Route path='/dados' exact component={Dados}/>  
         <Route path='/contato' exact component={Contato}/>
         <Route path='/crp' exact component = {CRP}/>
-        <Route path='/preservacao'exact component ={Preservacao}/>   
+        <Route path='/preservacao'exact component ={Preservacao}/>
+        <Route path='/osm' exact component ={OSM}/>   
     </Switch>
 )
 
