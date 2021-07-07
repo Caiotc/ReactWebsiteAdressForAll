@@ -41,13 +41,11 @@ import {
                 Av. Paulista, 171 - 4º andar - Bela Vista - São Paulo – SP – Brasil - 01311-904
                 </Description>                
                 <Link>contato@addressforall.org</Link>
-            </ContactUsSection>
-            <ContactUsSection>
+ 
+    
                 <SubTitle>Encontre-nos</SubTitle>
                 <Description>Nos esforçamos para construir uma rede sólida em 
                     busca do livre acesso a dados geográficos!</Description>
-            </ContactUsSection>
-            <ContactUsSection>
                 <Carousel itemsToShow={4} pagination={false} style={{marginTop:'30px'}}>
                    <ContactUsNetworkImg src={logo}></ContactUsNetworkImg>
                    <ContactUsNetworkImg src={logo}></ContactUsNetworkImg>

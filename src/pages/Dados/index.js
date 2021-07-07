@@ -7,7 +7,7 @@ import {
     Link
   } from '../../components/globalComponents'
 
-import {DataSection,DataPicture,DataDescriptionImgSection,DataPictureDescription,DataPageContentContainer} from './style'
+import {DataSection,DataPicture,DataDescriptionImgSection,DataPictureDescription,DataPageContentContainer} from './styles'
 import Division from '../../components/Division/index'
 import consolidados from '../../assets/images/Dados/consolidados.png'
 import filtrados01 from '../../assets/images/Dados/filtrados01.png'
@@ -35,8 +35,7 @@ function Dados(){
                 <DataPicture src={modelo02} >
 
                 </DataPicture>
-              </DataSection>
-              <DataSection>
+
                 <SubTitle>Dados Preservados</SubTitle>
                 <br></br>
                 <DataDescriptionImgSection>
@@ -50,9 +49,7 @@ function Dados(){
                 <Link href='/'>API 01 - Encontre Fornecedores que já doaram dados</Link>
                 <Link href='/'>API 02 - Consulte Jurisdições (locais) que já receberam dados</Link>            
                 <Link href='/'>API 03 - Recupere pacotes de dados pelo hash</Link>                                        
-              </DataSection>
-              
-              <DataSection>
+
                 <SubTitle>Dados Filtrados (Entrada)</SubTitle>
                 <br></br>
                 <DataDescriptionImgSection>
@@ -68,9 +65,7 @@ function Dados(){
                 </DataDescriptionImgSection>
                 <Link href='/'>API 04 - Dados organizados por Fornecedor ou Jurisdição (local)</Link>
                 <Link href='/'>API 05 - Confira se um endereço está entre os dados filtrados</Link>                                                
-              </DataSection>
 
-              <DataSection>
                 <SubTitle>Dados Filtrados (Entrada)</SubTitle>
                 <br></br>
                 <DataDescriptionImgSection>
@@ -90,14 +85,15 @@ function Dados(){
                 </DataDescriptionImgSection>
                 <Link href='/'>API 06 - Buscar um endereço no banco de dados consolidados</Link>
                 <Link href='/'>API 07 - Ver serviços e APIs disponíveis</Link>                                                
-              </DataSection>
+               </DataSection>
+                      
 
-              <Division description={`No link abaixo você pode acessar 
-              nossa página de demonstração composta por APIs bem como 
-              acessar cada uma dessas APIs.`} 
-              buttonText={'Página de APIs'} buttonType={'Light'}></Division>
-                            
-              <DataSection>
+                <Division description={`No link abaixo você pode acessar 
+                nossa página de demonstração composta por APIs bem como 
+                acessar cada uma dessas APIs.`} 
+                buttonText={'Página de APIs'} buttonType={'Light'}></Division>
+                 <DataSection>             
+              
                 <SubTitle>Dados Filtrados (Entrada)</SubTitle>
                 <br></br>
                   <Description>
