@@ -8,6 +8,7 @@ import CRP from '../pages/CRP';
 import Preservacao from '../pages/Preservacao';
 import OSM from '../pages/OSM';
 import GovernoGeoDigital from '../pages/GovernoGeoDigital';
+import Estatuto from '../pages/Estatuto';
 
 
 const Routes = () =>(
@@ -20,6 +21,7 @@ const Routes = () =>(
         <Route path='/preservacao'exact component ={Preservacao}/>
         <Route path='/osm' exact component ={OSM}/>   
         <Route path='/geodigital' exact component ={GovernoGeoDigital}/>
+        <Route path='/estatuto' exact component ={Estatuto}/>
     </Switch>
 )
 
