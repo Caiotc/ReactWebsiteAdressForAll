@@ -7,24 +7,23 @@ import {
   } from '../../components/globalComponents'
   
   import {  
-    StatuteContainer,
-    StatuteSection  
+    DataTypeContainer,
+    DataTypeSection  
   } from './styles'
   
 
   
-function Estatuto() {
+function TipoDeDados() {
     return (  
-        <StatuteContainer>
-            <StatuteSection>
+        <DataTypeContainer>
+            <DataTypeSection>
             <Title>Estatuto</Title>
             <br></br>            
             <Description>           
-            Incorporar código HTML disponível em:
+            O conteúdo será construído futuramente.
             </Description>                    
-            <Link href="addressforall.org/estatuto">addressforall.org/estatuto</Link>  
-        </StatuteSection>
-        </StatuteContainer>
+        </DataTypeSection>
+        </DataTypeContainer>
     );
 }
-export default Estatuto;
+export default TipoDeDados;
