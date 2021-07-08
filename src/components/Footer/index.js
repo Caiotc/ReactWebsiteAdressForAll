@@ -1,9 +1,15 @@
 import {FooterContainer,FooterContent,LogoContainer,Logo,FooterLink,SiteMapColumn,SiteMapContainer} from './styles'
 
+import {useLanguage} from '../../context/language';
+import {useLanguageState} from '../../context/languageState';
+
 import logo from '../../assets/images/logo.png'
 
 function Footer() {
-  return (    
+    const {language} = useLanguage();
+    const {languageState} = useLanguageState();
+
+    return (    
     <FooterContainer>
         <FooterContent>
             <LogoContainer>
@@ -11,25 +17,25 @@ function Footer() {
             </LogoContainer>
             <SiteMapContainer>
                 <SiteMapColumn>
-                    <FooterLink>Quem Somos</FooterLink>
+                    <FooterLink>{languageState[language].footer.link1}</FooterLink>
                     <br></br>
-                    <FooterLink>Estatuto</FooterLink>
+                    <FooterLink>{languageState[language].footer.link2}</FooterLink>
                 </SiteMapColumn>
                 <SiteMapColumn>
-                    <FooterLink>Dados</FooterLink>
+                    <FooterLink>{languageState[language].footer.link3}</FooterLink>
                     <br></br>
-                    <FooterLink>API</FooterLink>
+                    <FooterLink>{languageState[language].footer.link4}</FooterLink>
                 </SiteMapColumn>
                 <SiteMapColumn>
-                    <FooterLink>Contato</FooterLink>
+                    <FooterLink>{languageState[language].footer.link5}</FooterLink>
                     <br></br>
-                    <FooterLink>FAQ</FooterLink>
+                    <FooterLink>{languageState[language].footer.link6}</FooterLink>
                 </SiteMapColumn>
             </SiteMapContainer>
         </FooterContent>
     </FooterContainer>
- 
-  );
+
+    );
 }
 
 export default Footer;

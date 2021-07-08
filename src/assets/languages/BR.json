@@ -1,0 +1,36 @@
+{	
+	"navbar": {
+		"link1": "Quem somos",
+		"link2": "Dados",
+		"link3": "API",
+		"link4": "Contato"
+	},
+	"footer": {
+		"link1": "Quem somos",
+		"link2": "Estatuto",
+		"link3": "Dados",
+		"link4": "API",
+		"link5": "Contato",
+		"link6": "FAQ"
+	},
+	"homepage": {
+	 "title": "AdressForAll",
+	 "descriptionTitle": "Para que os serviços cheguem ao lugar certo, endereços são uma questão de soberania para qualquer país.",
+	 "button1": "Assistir ao Vídeo",
+	 "location1": "Brasil",
+	 "location2": "Belo Horizonte",
+	 "location3": "Digite um endereço",
+	 "subTitle1": "Endereços Importam!",
+	 "description1": "Não saber onde está um endereço pode custar Tempo, Vidas, Combustível, Retrabalho.",
+	 "subTitle2": "Problema: BDs separados!",
+	 "description2": "Prefeituras, concessionárias, empresas de logística, melhoram seus bancos de dados de endereços, mas cada um mantem a sua base de dados isolada da base dos outros.",
+	 "subTitle3": "Vamos Colaborar!",
+	 "description3": "É por isto que o Instituo AddressForAll foi criado. O projeto convida todos a participar do esforço e a colocar seus endereços num banco de dados único, de domínio público, colaborativo, que todos podem consultar e baixar gratuitamente.", 
+	 "divison1": "O instituto de Teconologia Geo-Sociais AddressForAlL tem por objetivo a defesa dos dados abertos e da melhoria social através do bom uso da tecnologia com ênfase nas tecnologias geo-espaciais.",
+	 "divisonButon1": "Quem Somos", 
+	 "divison2": "Saiba mais sobre como funcionam os processos de coleta filtragem e consolidação de nossos dados, acessando nossa Página de Dados.",
+	 "divisonButon2": "Página de Dados", 
+	 "newsletter": "Assine nossa newsletter"
+	}
+	
+}

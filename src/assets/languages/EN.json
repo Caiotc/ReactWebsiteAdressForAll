@@ -1,0 +1,36 @@
+{	
+	"navbar": {
+		"link1": "Who we are",
+		"link2": "Data",
+		"link3": "API",
+		"link4": "Contact"
+	},
+	"footer": {
+		"link1": "Who we are",
+		"link2": "Statute",
+		"link3": "Data",
+		"link4": "API",
+		"link5": "Contact",
+		"link6": "FAQ"
+	},
+	"homepage": {
+	 "title": "AdressForAll",
+	 "descriptionTitle": "For services to get to the right place, addresses are a matter of sovereignty for any country.",
+	 "button1": "Watch the Video",
+	 "location1": "Brazil",
+	 "location2": "Belo Horizonte",
+	 "location3": "Enter an address",
+	 "subTitle1": "Addresses Matter!",
+	 "description1": "Not knowing where an address is can cost Time, Lives, Fuel, Rework.",
+	 "subTitle2": "Problem: Separate DBs!",
+	 "description2": "City halls, concessionaires, logistics companies improve their address databases, but each keeps its database isolated from the base of others.",
+	 "subTitle3": "Let's Collaborate!",
+	 "description3": "This is why the AddressForAll Institute was created. The project invites everyone to participate in the effort and put their addresses in a single, public domain, collaborative database that everyone can consult and download for free.", 
+	 "divison1": "The AddressForAlL Geo-Social Technology Institute aims to defend open data and social improvement through the good use of technology with an emphasis on geo-spatial technologies.",
+	 "divisonButon1": "Who we are", 
+	 "divison2": "Learn more about how our data collection, filtering and consolidation processes work by visiting our Data Page.",
+	 "divisonButon2": "Data Page", 
+	 "newsletter": "Sign up for our newsletter"
+	}
+	
+}
