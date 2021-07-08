@@ -10,6 +10,7 @@ import OSM from '../pages/OSM';
 import GovernoGeoDigital from '../pages/GovernoGeoDigital';
 import Estatuto from '../pages/Estatuto';
 import TipoDeDados from '../pages/TiposDeDados';
+import Contribute from '../pages/Contribute';
 
 
 const Routes = () =>(
@@ -24,6 +25,7 @@ const Routes = () =>(
         <Route path='/geodigital' exact component ={GovernoGeoDigital}/>
         <Route path='/estatuto' exact component ={Estatuto}/>
         <Route path='/tiposdedados' exact component ={TipoDeDados}/>
+        <Route path='/contribua' exact component ={Contribute}/>
     </Switch>
 )
 

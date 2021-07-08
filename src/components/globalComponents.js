@@ -53,3 +53,6 @@ export const Link = styled.a`
     margin-bottom: 1em;
     text-decoration: underline;
 `
+export const HilightLigthBlue = styled.p`
+    color: #3CC5FF;
+`;
