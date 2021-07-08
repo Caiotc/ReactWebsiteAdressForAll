@@ -11,12 +11,13 @@ import GovernoGeoDigital from '../pages/GovernoGeoDigital';
 import Estatuto from '../pages/Estatuto';
 import TipoDeDados from '../pages/TiposDeDados';
 import Contribute from '../pages/Contribute';
+import PerguntasFrequentes from '../pages/PerguntasFrequentes';
 
 
 const Routes = () =>(
     <Switch>
         <Route path="/" exact component={Home}/>
-        <Route path="/quemsomos" exact component={QuemSomos}/> 
+        <Route path="/quem-somos" exact component={QuemSomos}/> 
         <Route path='/dados' exact component={Dados}/>  
         <Route path='/contato' exact component={Contato}/>
         <Route path='/crp' exact component = {CRP}/>
@@ -24,7 +25,8 @@ const Routes = () =>(
         <Route path='/osm' exact component ={OSM}/>   
         <Route path='/geodigital' exact component ={GovernoGeoDigital}/>
         <Route path='/estatuto' exact component ={Estatuto}/>
-        <Route path='/tiposdedados' exact component ={TipoDeDados}/>
+        <Route path='/tipos-de-dados' exact component ={TipoDeDados}/>
+        <Route path='/perguntas-frequentes' exact component ={PerguntasFrequentes}/>
         <Route path='/contribua' exact component ={Contribute}/>
     </Switch>
 )

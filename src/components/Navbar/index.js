@@ -9,6 +9,7 @@ import {
     NavbarContent,
     NavbarIcon,
     NavbarLogo,
+    NavbarLinkIconWrapper
 } from './style'
 
 import logo from '../../assets/images/logo.png'
@@ -33,12 +34,24 @@ function Navbar() {
 
   return (    
     <NavbarContainer>
-        <NavbarContent>
-            <NavbarLogo src={logo} alt={'Address for all'}/>
-            <NavbarAnchor>{languageState[language].navbar.link1}</NavbarAnchor>
-            <NavbarAnchor>{languageState[language].navbar.link2}</NavbarAnchor>
-            <NavbarAnchor>{languageState[language].navbar.link3}</NavbarAnchor>
-            <NavbarAnchor>{languageState[language].navbar.link4}</NavbarAnchor>   
+        <NavbarContent>                      
+            <NavbarLogo  src={logo} alt={'Address for all'}/>
+            <NavbarLinkIconWrapper>           
+              <NavbarAnchor href='/quem-somos'>{languageState[language].navbar.link1}</NavbarAnchor>
+              <span class="material-icons">expand_more</span>
+            </NavbarLinkIconWrapper>
+            <NavbarLinkIconWrapper>
+              <NavbarAnchor href='/dados'>{languageState[language].navbar.link2}</NavbarAnchor>
+              <span class="material-icons">expand_more</span>
+            </NavbarLinkIconWrapper>
+            <NavbarLinkIconWrapper>
+              <NavbarAnchor>{languageState[language].navbar.link3}</NavbarAnchor>
+              <span class="material-icons">expand_more</span>
+            </NavbarLinkIconWrapper>
+            <NavbarLinkIconWrapper>
+              <NavbarAnchor>{languageState[language].navbar.link4}</NavbarAnchor>   
+              <span class="material-icons">expand_more</span>
+            </NavbarLinkIconWrapper>
             <NavbarIcon src={git} alt={'Github'}/>
             <NavbarIcon src={dadosabertos} alt={'Dados abertos'}/>
             <NavbarAnchor>BR</NavbarAnchor>
@@ -51,4 +64,15 @@ function Navbar() {
   );
 }
 
+
+function DropDown(){
+  return(
+    <div>
+      <NavbarLinkIconWrapper>
+        <NavbarAnchor>teste</NavbarAnchor>
+        <span class="material-icons">expand_more</span>
+      </NavbarLinkIconWrapper>
+    </div>
+  );
+}
 export default Navbar;

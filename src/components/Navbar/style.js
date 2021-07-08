@@ -29,6 +29,7 @@ export const NavbarAnchor = styled.a`
     font-weight: 500;
     text-decoration: none;
     cursor: pointer;
+    margin-right: 0;
 `
 
 export const NavbarIcon = styled.img`
@@ -38,3 +39,8 @@ export const NavbarIcon = styled.img`
     border-radius: 50%;
     padding: 2px;
 ` 
+export const NavbarLinkIconWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`

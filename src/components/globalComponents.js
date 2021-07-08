@@ -19,7 +19,7 @@ export const Description = styled.div`
     font-size: 30px;
     line-height: 35px;
     color: #544837;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 `;
 
 export const DarkBlueButton = styled.button`

@@ -4,10 +4,10 @@ export const DataPageContentContainer = styled.div`
 
 `;
 export const DataSection = styled.div`
-    margin: 6em;
-    padding: 3em;
+    margin: 2em;
+    padding: 1em;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
 `
 export const DataDescriptionImgSection = styled.div`
     flex:1;
