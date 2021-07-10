@@ -1,11 +1,13 @@
 import Carousel from 'react-elastic-carousel'
 
+import {useLanguage} from '../../context/language';
+import {useLanguageState} from '../../context/languageState';
+
 import {
     Title,
     SubTitle,
     Description,
-    Link,
-    DarkBlueButton
+    Link
   } from '../../components/globalComponents'
   
   import ContactSection from '../../components/ContactSection'; 
@@ -17,35 +19,39 @@ import {
   import logo from '../../assets/images/logo.png'
   
   function Contato() {
+
+    const {language} = useLanguage();
+    const {languageState} = useLanguageState();
+
     return (  
         <ContactUsContainer>
             <ContactUsSection>
                 <Title>
-                    Contato
+                    {languageState[language].contato.title}
                 </Title>
                 <Description>
-                Contamos com a ajuda de todos os atores que 
-                tiverem dados relevantes para os objetivos do Instituto, 
-                se você tiver como ajudar entre em contato!
+                    {languageState[language].contato.descriptionTitle}
                 </Description>
             </ContactUsSection>            
 
-            <ContactSection buttonText="Enviar" description ="Escreva sua mensagem e não esqueça de deixar um contato!" buttonType="Light"></ContactSection>
+            <ContactSection buttonText={languageState[language].contato.button} description ={languageState[language].contato.textArea} buttonType="Light"></ContactSection>
 
             <ContactUsSection>
                 <SubTitle>
-                    Encontre-nos
+                    {languageState[language].contato.subTitle1}
                 </SubTitle>
                 <br></br>
                 <Description>
-                Av. Paulista, 171 - 4º andar - Bela Vista - São Paulo – SP – Brasil - 01311-904
-                </Description>                
+                    {languageState[language].contato.description1A}
+                </Description>     
+                <Description>
+                    {languageState[language].contato.description1B}
+                </Description>            
                 <Link>contato@addressforall.org</Link>
- 
-    
-                <SubTitle>Encontre-nos</SubTitle>
-                <Description>Nos esforçamos para construir uma rede sólida em 
-                    busca do livre acesso a dados geográficos!</Description>
+                <SubTitle>{languageState[language].contato.subTitle2}</SubTitle>
+                <Description>
+                    {languageState[language].contato.description2}
+                </Description>
                 <Carousel itemsToShow={4} pagination={false} style={{marginTop:'30px'}}>
                    <ContactUsNetworkImg src={logo}></ContactUsNetworkImg>
                    <ContactUsNetworkImg src={logo}></ContactUsNetworkImg>

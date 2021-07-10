@@ -1,9 +1,9 @@
+import {useLanguage} from '../../context/language';
+import {useLanguageState} from '../../context/languageState';
+
 import {
     Title,
-    SubTitle,
     Description,
-    DarkBlueButton,
-    Link
   } from '../../components/globalComponents'
   
   import {  
@@ -14,16 +14,20 @@ import {
 
   
 function TipoDeDados() {
-    return (  
-        <DataTypeContainer>
-            <DataTypeSection>
-            <Title>Estatuto</Title>
-            <br></br>            
-            <Description>           
-            O conteúdo será construído futuramente.
-            </Description>                    
-        </DataTypeSection>
-        </DataTypeContainer>
-    );
+
+  const {language} = useLanguage();
+  const {languageState} = useLanguageState();
+
+  return (  
+    <DataTypeContainer>
+      <DataTypeSection>
+        <Title>{languageState[language].tiposdedados.title}</Title>
+        <br></br>            
+        <Description>           
+          {languageState[language].tiposdedados.descriptionTitle}
+        </Description>                    
+      </DataTypeSection>
+    </DataTypeContainer>
+  );
 }
 export default TipoDeDados;

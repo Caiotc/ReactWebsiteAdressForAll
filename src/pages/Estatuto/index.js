@@ -1,8 +1,9 @@
+import {useLanguage} from '../../context/language';
+import {useLanguageState} from '../../context/languageState';
+
 import {
     Title,
-    SubTitle,
     Description,
-    DarkBlueButton,
     Link
   } from '../../components/globalComponents'
   
@@ -11,16 +12,18 @@ import {
     StatuteSection  
   } from './styles'
   
-
-  
 function Estatuto() {
+
+  const {language} = useLanguage();
+  const {languageState} = useLanguageState();
+
     return (  
         <StatuteContainer>
             <StatuteSection>
-            <Title>Estatuto</Title>
+            <Title>{languageState[language].estatuto.title}</Title>
             <br></br>            
             <Description>           
-            Incorporar código HTML disponível em:
+              {languageState[language].estatuto.descriptionTitle}
             </Description>                    
             <Link href="addressforall.org/estatuto">addressforall.org/estatuto</Link>  
         </StatuteSection>

@@ -1,8 +1,10 @@
+import {useLanguage} from '../../context/language';
+import {useLanguageState} from '../../context/languageState';
+
 import {
     Title,
     SubTitle,
     Description,
-    DarkBlueButton,
     Link
   } from '../../components/globalComponents'
   
@@ -14,44 +16,41 @@ import {
 
   
 function Preservacao() {
+
+    const {language} = useLanguage();
+    const {languageState} = useLanguageState();
+
     return (  
         <PreservationContainer>
             <PreservationSection>
-            <Title>Preservação Digital</Title>
-            <SubTitle>Preservamos dados por décadas</SubTitle>
+            <Title>{languageState[language].preservacaodigital.title}</Title>
+            <SubTitle>{languageState[language].preservacaodigital.subTitle1}</SubTitle>
             <br></br>
             <Description>
-            O foco da preservação digital são "pacotes de dados" 
-            cedidos ao domínio público por um fornecedor de dados primários, que
-            detém o direito de licenciar dados espaciais. Os dados de interesse do 
-            Instituto AddressForAll são eleitos através de uma curadoria e submetidos a 
-            um processo de convite e seleção. Para detalhes técnicos consulte a documentação:
+                {languageState[language].preservacaodigital.description1A}
+            </Description>
+            <Description>
+                {languageState[language].preservacaodigital.description1B}
             </Description>
             <Link href='https://github.com/AddressForAll/digital-preservation'>git.AddressForAll.org/digital-preservation</Link>
             <Description>
-            O Projeto Digital Preservation é mantido publicamente em neste mesmo 
-            repositório. 
+                {languageState[language].preservacaodigital.description1C}
             </Description>
             <Description>
-            As curadorias locais de cada pais são soberanas nas suas 
-            decisões, em geral, seguindo de perto ou tendo participação efetiva de membros da 
-            comunidade OpenStreetMap do país. Cada curadoria local tem autonomia de governança, 
-            cumprindo, como entidade federada, as diretivas gerais do Projeto. 
+                {languageState[language].preservacaodigital.description1D}
             </Description>
             <Description>
-            Por exemplo a Curadoria Brasil 
-            gerencia seu próprio repositório em:
+                {languageState[language].preservacaodigital.description1E}
             </Description>
 
             <Link href='https://git.AddressForAll.org/digital-preservation-BR'>git.AddressForAll.org/digital-preservation-BR</Link>
             <Description>
-            O projeto de Código de Roteamento Postal 
-            contorna legalmente esta incoerência. 
+                {languageState[language].preservacaodigital.description1F}
             </Description>
-            <Link href='https://git.AddressForAll.org/digital-preservation-BR'>git.AddressForAll.org/digital-preservation-BR</Link>
+            <Link href='api-test.AddressForAll.org/v1.htm/vw_core/origin/BR'>api-test.AddressForAll.org/v1.htm/vw_core/origin/BR</Link>
           
             <Description>
-                Para detalhes técnicos consulte a documentação:
+                {languageState[language].preservacaodigital.description1G}
             </Description>
                 <Link href='https://api-test.AddressForAll.org/v1.htm/vw_core/donor/BR'>
                 api-test.AddressForAll.org/v1.htm/vw_core/donor/BR

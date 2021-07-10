@@ -39,6 +39,8 @@ export const PartnerImg = styled.img`
     width: 300px;
     border-radius: 10px;
     background-color: #0B64E1;
+    margin-top: 10px;
+    margin: 0 10px 0 10px;
 `;
 
 export const ProjectCardsContainer = styled.div`

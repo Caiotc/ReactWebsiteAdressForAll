@@ -9,7 +9,7 @@ import {
     NavbarContent,
     NavbarIcon,
     NavbarLogo,
-    NavbarLinkIconWrapper
+    NavbarLinkIconWrapper,
 } from './style'
 
 import logo from '../../assets/images/logo.png'

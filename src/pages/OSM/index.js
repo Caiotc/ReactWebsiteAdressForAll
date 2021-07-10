@@ -1,8 +1,10 @@
+import {useLanguage} from '../../context/language';
+import {useLanguageState} from '../../context/languageState';
+
 import {
     Title,
     SubTitle,
     Description,
-    DarkBlueButton,
     Link
   } from '../../components/globalComponents'
   
@@ -14,32 +16,26 @@ import {
 
   
 function OSM() {
+
+    const {language} = useLanguage();
+    const {languageState} = useLanguageState();
+
     return (  
         <OSMContainer>
             <OSMSection>
-            <Title>OSM.code</Title>
+            <Title>{languageState[language].osm.title}</Title>
             <br></br>
-            <SubTitle>Um geocódigo simples para localização</SubTitle>
+            <SubTitle>{languageState[language].osm.subTitle1}</SubTitle>
             <br></br>
             <Description>
-            A Latitude/Longitude é um código muito difícil para seres 
-            humanos manusear e lembrar. Entretanto, apontar um local 
-            no mapa é necessário para todos, particularmente para lugares onde 
-            não tem endereços de qualidade, como nas comunidades, nos desertos, nas savanas 
-            etc… 
+                {languageState[language].osm.description1A}
             </Description>
             <Description>
-            Geocódigos são códigos mais fáceis de lembrar, particularmente se desenvolvermos 
-            geocódigos mais curtos. Este projeto realiza uma pesquisa acadêmica para desenvolver a 
-            melhor tecnologia de Geocódigo e leva-la para os governos e a sociedade. Esta tecnologia 
-            deveria considerar e ser harmonizada com as grades estatísticas, porque os estudos estatísticos, 
-            cada dia mais, são geoespaciais.
+                {languageState[language].osm.description1B}
             </Description>
             <Description>
-            Para detalhes técnicos consulte a documentação:
-
+                {languageState[language].osm.description1C}
             </Description>
-
                 <Link href="https://ppkrauss.github.io/Sfc4q">ppkrauss.github.io/Sfc4q</Link>  
         </OSMSection>
         </OSMContainer>

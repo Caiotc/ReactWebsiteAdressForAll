@@ -24,7 +24,6 @@ import {
 
 import Division from '../../components/Division'
 
-
 import player from '../../assets/images/player.png'
 import ilustracao01 from '../../assets/images/ilustracao01.png'
 import ilustracao02 from '../../assets/images/ilustracao02.png'
