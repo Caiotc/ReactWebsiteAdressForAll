@@ -67,16 +67,22 @@ export const Location = styled.div`
     align-items:center;
 `;
 
-export const Newsletter = styled.div`    
+export const Newsletter = styled.button`    
     width: 100%;
     margin: 10px;
     height: 50px;
-    border: solid 1px #000;
+    border: solid 1px #979797;
     border-radius: 50px;
     background-color: #fff;
     color: #979797;   
     display: flex;
     justify-content:center;
     align-items:center;
-
+    font-weight:700;
+    font-size: 24px;
+    transition: all 0.3s ease 0s;
+    :hover{
+        border: solid 1px #000;
+        color: #000;   
+    }
 `;

@@ -88,7 +88,7 @@ function Dados(){
                   
 
             <Division description={languageState[language].dados.divison1} 
-            buttonText={languageState[language].dados.divisonButon1} buttonType={'Light'}></Division>
+            buttonText={languageState[language].dados.divisonButon1} buttonType={'LightLink'} to={'/api'} ></Division>
               <DataSection>             
           
             <SubTitle>{languageState[language].dados.subTitle4}</SubTitle>

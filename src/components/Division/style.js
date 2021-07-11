@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+
 export const DivisionContainer = styled.div`
     width: 100%;
     height: 35%;
@@ -47,4 +48,5 @@ export const Description = styled.h1`
     margin-top: 2em;
 
 `;
+
 

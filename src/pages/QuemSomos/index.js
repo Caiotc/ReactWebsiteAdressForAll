@@ -119,7 +119,7 @@ function QuemSomos() {
       </WhoWeAreSection>
       
 
-      <Division description={languageState[language].quemsomos.divison1} buttonText={languageState[language].quemsomos.divisonButon1} buttonType={'Light'}/>
+      <Division description={languageState[language].quemsomos.divison1} buttonText={languageState[language].quemsomos.divisonButon1} buttonType={'LightLink'} to={'/estatuto'} />
       <WhoWeAreSection>
         <SubTitle>{languageState[language].quemsomos.subTitle7}</SubTitle>
         <br></br>
@@ -131,7 +131,7 @@ function QuemSomos() {
             <ProjectImg src={logo} alt={'Parceiro'}/>
             <ProjectTitle>{languageState[language].quemsomos.project1Title}</ProjectTitle>
             <ProjectDescription>{languageState[language].quemsomos.project1Description}</ProjectDescription>
-            <ProjectButton href={'#'}>{languageState[language].quemsomos.project1Button}</ProjectButton>
+            <ProjectButton href={'/'}>{languageState[language].quemsomos.project1Button}</ProjectButton>
           </ProjectCard>
           <ProjectCard>
             <ProjectImg src={logo} alt={'Parceiro'}/>

@@ -40,7 +40,7 @@ function Home() {
         <div style={{flex:1, display:'flex', flexDirection: 'column', justifyContent: 'space-around',height:'100%'}}>
           <Title>{languageState[language].homepage.title}</Title>
           <Description>{languageState[language].homepage.descriptionTitle}</Description>
-          <DarkBlueButton>{languageState[language].homepage.button1}</DarkBlueButton>
+          <DarkBlueButton >{languageState[language].homepage.button1}</DarkBlueButton>
         </div>
         <div style={{flex:1}}>
           <Play src={player} alt={'Vídeo'}/>
@@ -85,9 +85,9 @@ function Home() {
         </div>
       </HomeSection>
 
-      <Division description={languageState[language].homepage.divison1} buttonText={languageState[language].homepage.divisonButon1} buttonType={'Light'}/>
+      <Division description={languageState[language].homepage.divison1} buttonText={languageState[language].homepage.divisonButon1} buttonType={'LightLink'} to={'/quem-somos'} />
       <HomeSection></HomeSection>
-      <Division description={languageState[language].homepage.divison2} buttonText={languageState[language].homepage.divisonButon2} buttonType={'Light'}/>
+      <Division description={languageState[language].homepage.divison2} buttonText={languageState[language].homepage.divisonButon2} buttonType={'LightLink'} to={'/dados'} />
 
       <HomeSection>
         <Newsletter>{languageState[language].homepage.newsletter}</Newsletter>

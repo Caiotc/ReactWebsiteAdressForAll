@@ -10,6 +10,8 @@ import {
     NavbarIcon,
     NavbarLogo,
     NavbarLinkIconWrapper,
+    LanguageSelect,
+    LanguageOption
 } from './style'
 
 import logo from '../../assets/images/logo.png'
@@ -55,10 +57,10 @@ function Navbar() {
             <NavbarIcon src={git} alt={'Github'}/>
             <NavbarIcon src={dadosabertos} alt={'Dados abertos'}/>
             <NavbarAnchor>BR</NavbarAnchor>
-            <select onChange={(e)=>{onLanguageSelectHandler(e.target.value)}}>
-              <option value="BR">BR</option>
-              <option value="EN">EN</option>
-            </select>
+            <LanguageSelect onChange={(e)=>{onLanguageSelectHandler(e.target.value)}}>
+              <LanguageOption value="BR">BR</LanguageOption>
+              <LanguageOption value="EN">EN</LanguageOption>
+            </LanguageSelect>
         </NavbarContent>
     </NavbarContainer>
   );

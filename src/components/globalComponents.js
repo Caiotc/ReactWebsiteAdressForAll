@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link as RouterLink } from 'react-router-dom';
 
 export const Title = styled.h1`
     font-weight: 800;
@@ -23,15 +24,24 @@ export const Description = styled.div`
 `;
 
 export const DarkBlueButton = styled.button`
-    width: 50%;
-    padding: 3%;
-    border: 0px;
-    border-color: #0B64E1;
     background-color: #0B64E1;
-    color: #FFFFFF;
-    font-size: 15px;
-    line-height: 1.5em;
+    height: 60px;
+    width: 270px;
+    border:none;
+    border-radius: 4px;
+    color:#fff;
+    font-size: 16px;
+    font-weight: 800;
     text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 1);
+    transition: all 0.3s ease 0s;
+
+    :hover{
+        background-color: #3CC5FF;   
+        transform: translateY(-7px);
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 1);
+    }
 `;
 
 export const LightBlueButton = styled.button`
@@ -42,8 +52,18 @@ export const LightBlueButton = styled.button`
     border-radius: 4px;
     color:#fff;
     font-size: 16px;
-    font-weight: 800px;
+    font-weight: 800;
     text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 1);
+    transition: all 0.3s ease 0s;
+
+    :hover{
+        background-color: #0B64E1;  
+        transform: translateY(-7px); 
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 1);
+
+    }
 `;
 export const Link = styled.a`
     font-weight: 400;
@@ -56,3 +76,30 @@ export const Link = styled.a`
 export const HilightLigthBlue = styled.p`
     color: #3CC5FF;
 `;
+
+export const LightBlueLink = styled(RouterLink)`
+    background-color: #3CC5FF;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 270px;
+    border:none;
+    border-radius: 4px;
+    color:#fff;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 1);
+    transition: all 0.3s ease 0s;
+    text-decoration:none;
+
+    :hover{
+        background-color: #0B64E1;  
+        transform: translateY(-7px); 
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 1);
+
+    }
+`;
+

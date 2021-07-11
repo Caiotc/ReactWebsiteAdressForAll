@@ -44,3 +44,20 @@ export const NavbarLinkIconWrapper = styled.div`
     justify-content: center;
     align-items: center;
 `
+
+export const LanguageSelect = styled.select`
+    background-color: #0B64E1;
+    font-size: 25px;
+    font-weight: 500;
+    color:#fff;
+    border:none;
+`
+
+export const LanguageOption = styled.option`
+    background-color: #fff;
+    color:#000;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin: 20px;
+`

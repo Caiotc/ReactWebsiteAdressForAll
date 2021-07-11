@@ -17,19 +17,19 @@ function Footer() {
             </LogoContainer>
             <SiteMapContainer>
                 <SiteMapColumn>
-                    <FooterLink>{languageState[language].footer.link1}</FooterLink>
+                    <FooterLink href={'/quem-somos'}>{languageState[language].footer.link1}</FooterLink>
                     <br></br>
-                    <FooterLink>{languageState[language].footer.link2}</FooterLink>
+                    <FooterLink href={'/estatuto'}>{languageState[language].footer.link2}</FooterLink>
                 </SiteMapColumn>
                 <SiteMapColumn>
-                    <FooterLink>{languageState[language].footer.link3}</FooterLink>
+                    <FooterLink href={'/dados'}>{languageState[language].footer.link3}</FooterLink>
                     <br></br>
-                    <FooterLink>{languageState[language].footer.link4}</FooterLink>
+                    <FooterLink href={'/api'}>{languageState[language].footer.link4}</FooterLink>
                 </SiteMapColumn>
                 <SiteMapColumn>
-                    <FooterLink>{languageState[language].footer.link5}</FooterLink>
+                    <FooterLink href={'/contato'}>{languageState[language].footer.link5}</FooterLink>
                     <br></br>
-                    <FooterLink>{languageState[language].footer.link6}</FooterLink>
+                    <FooterLink href={'/perguntas-frequentes'}>{languageState[language].footer.link6}</FooterLink>
                 </SiteMapColumn>
             </SiteMapContainer>
         </FooterContent>

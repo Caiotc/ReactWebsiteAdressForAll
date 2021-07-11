@@ -1,4 +1,4 @@
-import {LightBlueButton,DarkBlueButton} from '../globalComponents'
+import {LightBlueButton,DarkBlueButton,LightBlueLink} from '../globalComponents'
 
 import {
   DivisionContainer,
@@ -25,6 +25,9 @@ function Division(props) {
           }
           {props.buttonType === 'Dark' &&
             <DarkBlueButton>{props.buttonText}</DarkBlueButton>
+          }
+          {props.buttonType === 'LightLink' &&
+            <LightBlueLink to={props.to}>{props.buttonText}</LightBlueLink>
           }
         </DivisionInfo>
       </DivisionContent>
