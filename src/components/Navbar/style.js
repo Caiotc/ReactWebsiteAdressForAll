@@ -1,43 +1,43 @@
 import styled from 'styled-components'
 
 export const NavbarContainer = styled.div`
-    width: 100%;
-    height: 150px;
-    padding: 2% 0% 2% 0%;
-    background-color: #0B64E1;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+
 `;
 
 export const NavbarLogo = styled.img`
     width: 150px;
-    margin-top: -10px;
+    margin: 20px;
+    color: #fff;
+    justify-self: start;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
 `;
 
 export const NavbarContent = styled.div`
-    height: 100%;  
-    width: 85%; 
+    
+    background-color: #0B64E1;
+    height: 80px;
     display: flex;
-    justify-content:space-between;
+    justify-content: center;
     align-items: center;
+    font-size: 1.2rem;
+    
 `;
 
 export const NavbarAnchor = styled.a`
-    color: #FFFFFF;
-    font-size: 25px;
-    font-weight: 500;
-    text-decoration: none;
-    cursor: pointer;
-    margin-right: 0;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
 `
 
 export const NavbarIcon = styled.img`
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     background-color: #000;
     border-radius: 50%;
     padding: 2px;
+    margin-right: 2rem;
 ` 
 export const NavbarLinkIconWrapper = styled.div`
     display: flex;
@@ -50,7 +50,13 @@ export const LanguageSelect = styled.select`
     font-size: 25px;
     font-weight: 500;
     color:#fff;
+    margin-right:5rem;
     border:none;
+    :hover{
+    background-color: #1888ff;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+  }
 `
 
 export const LanguageOption = styled.option`
@@ -60,4 +66,61 @@ export const LanguageOption = styled.option`
     justify-content:center;
     align-items: center;
     margin: 20px;
+`
+export const BuguerMenu = styled.span`
+
+`
+export const NavbarMenuIcon = styled.div`
+    display: none;
+    @media screen and (max-width: 960px) {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%,60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+`
+export const NavbarMenu = styled.div`
+    display: flex;
+    flex-direction: rows;
+    justify-content :space-space-around ;
+  @media screen and (max-width: 960px) {
+    
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 90vh;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+    
+
+    &.active {
+        background: #242222;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+
+  
+}
+`
+export const NavbarItem = styled.li`
+  display: flex;
+  align-items: center;
+  height: 80px;
+  :hover{
+    background-color: #1888ff;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+  }
+  @media screen and (max-width: 960px) {
+
+
+  }
 `

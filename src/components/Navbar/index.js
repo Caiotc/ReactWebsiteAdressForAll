@@ -1,4 +1,4 @@
-import React,{useEffect, useCallback} from 'react';
+import React,{useEffect, useCallback,useState} from 'react';
 
 import {useLanguage} from '../../context/language';
 import {useLanguageState} from '../../context/languageState';
@@ -11,12 +11,19 @@ import {
     NavbarLogo,
     NavbarLinkIconWrapper,
     LanguageSelect,
-    LanguageOption
+    LanguageOption,
+    BuguerMenu,
+    NavbarMenuIcon,
+    NavbarMenu,
+    NavbarItem
 } from './style'
-
+import DropDownWhoWeAre from '../Dropdown/DropDownWhoWeAre'; 
+import DropDownData from '../Dropdown/DropDownData';
+import DropDownApi from '../Dropdown/DropDownApi';
 import logo from '../../assets/images/logo.png'
 import git from '../../assets/images/git.png'
 import dadosabertos from '../../assets/images/dadosabertos.png'
+import { drop } from 'lodash';
 
 
 
@@ -25,6 +32,71 @@ function Navbar() {
   const {language,setAppLanguage} = useLanguage();
   const {languageState} = useLanguageState();
   
+  //events menu
+  //states
+  const [click,setClick] =  useState(false);
+  const [dropDown,setDropDown]= useState(false);
+  const [dropdownData,setDropDownData] =useState(false);
+  const [dropdownApi,setDropDownApi] = useState(false);
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () =>{
+    setClick(false) 
+  }
+  const onMouseEnter = (type) =>{
+    if(window.innerWidth < 960){
+      setDropDown(false)
+
+    }
+    else{
+      setDropDown(true)
+    }
+  }
+  const onMouseEnterData = ()=>{
+    if(window.innerWidth < 960){
+      setDropDownData(false)
+    }
+    else{
+      setDropDownData(true)
+    }
+    console.log(dropdownData)
+  }
+
+  const onMouseEnterApi = ()=>{
+    if(window.innerWidth < 960){
+      setDropDownApi(false)
+    }
+    else{
+      setDropDownApi(true)
+    }
+    console.log(dropdownData)
+  }
+
+  const onMouseLeaveApi = ()=>{
+    if(window.innerWidth < 960){
+      setDropDownApi(false)
+    }
+    else{
+      setDropDownApi(false)
+    }
+  }
+  const onMouseLeaveData = ()=>{
+    if(window.innerWidth < 960){
+      setDropDownData(false)
+    }
+    else{
+      setDropDownData(false)
+    }
+  }
+  const onMouseLeave = (type) =>{
+    if(window.innerWidth < 960){
+      setDropDown(false)
+    }
+    else{
+      setDropDown(false)
+    }
+  }
+
+  //
   useEffect(()=>{
     setAppLanguage('BR');
   },[setAppLanguage]);
@@ -36,27 +108,55 @@ function Navbar() {
 
   return (    
     <NavbarContainer>
-        <NavbarContent>                      
-            <NavbarLogo  src={logo} alt={'Address for all'}/>
-            <NavbarLinkIconWrapper>           
-              <NavbarAnchor href='/quem-somos'>{languageState[language].navbar.link1}</NavbarAnchor>
-              <span class="material-icons">expand_more</span>
-            </NavbarLinkIconWrapper>
-            <NavbarLinkIconWrapper>
-              <NavbarAnchor href='/dados'>{languageState[language].navbar.link2}</NavbarAnchor>
-              <span class="material-icons">expand_more</span>
-            </NavbarLinkIconWrapper>
-            <NavbarLinkIconWrapper>
-              <NavbarAnchor>{languageState[language].navbar.link3}</NavbarAnchor>
-              <span class="material-icons">expand_more</span>
-            </NavbarLinkIconWrapper>
-            <NavbarLinkIconWrapper>
-              <NavbarAnchor>{languageState[language].navbar.link4}</NavbarAnchor>   
-              <span class="material-icons">expand_more</span>
-            </NavbarLinkIconWrapper>
+        <NavbarContent>                                  
+                       
+            <NavbarMenuIcon
+              onClick={handleClick}>
+                <i className={click 
+                ?
+                'fas fa-times':
+                'fas fa-bars'}></i>
+            </NavbarMenuIcon>
+
+            <NavbarMenu className={click?
+            'active':
+            ''}>
+              <NavbarItem>
+                <a href ='/'>
+                <NavbarLogo  src={logo} alt={'Address for all'}/> 
+                </a>
+              </NavbarItem>
+              <NavbarItem  
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}>
+                <NavbarAnchor 
+                 onClick={closeMobileMenu}>
+                {languageState[language].navbar.link1}</NavbarAnchor>
+                <i className='fas fa-angle-down'/>
+                {dropDown && <DropDownWhoWeAre />}
+              </NavbarItem>
+              <NavbarItem
+                onMouseEnter={onMouseEnterData}
+                onMouseLeave={onMouseLeaveData}>
+                <NavbarAnchor>{languageState[language].navbar.link2}</NavbarAnchor>
+                <i className='fas fa-angle-down'/>
+                {dropdownData && <DropDownData/>}
+              </NavbarItem>
+              <NavbarItem 
+              onMouseEnter={onMouseEnterApi}
+              onMouseLeave={onMouseLeaveApi}>
+                <NavbarAnchor>{languageState[language].navbar.link3}</NavbarAnchor>
+                <i className='fas fa-angle-down'/>
+                {dropdownApi && <DropDownApi/>}
+              </NavbarItem>
+              <NavbarItem>  
+                <NavbarAnchor href='/contato'>{languageState[language].navbar.link4}</NavbarAnchor>   
+              </NavbarItem>
+            </NavbarMenu>
+
             <NavbarIcon src={git} alt={'Github'}/>
             <NavbarIcon src={dadosabertos} alt={'Dados abertos'}/>
-            <NavbarAnchor>BR</NavbarAnchor>
+   
             <LanguageSelect onChange={(e)=>{onLanguageSelectHandler(e.target.value)}}>
               <LanguageOption value="BR">BR</LanguageOption>
               <LanguageOption value="EN">EN</LanguageOption>
@@ -67,14 +167,5 @@ function Navbar() {
 }
 
 //hook dropdown!
-function DropDown(){
-  return(
-    <div>
-      <NavbarLinkIconWrapper>
-        <NavbarAnchor>teste</NavbarAnchor>
-        <span class="material-icons">expand_more</span>
-      </NavbarLinkIconWrapper>
-    </div>
-  );
-}
+
 export default Navbar;
