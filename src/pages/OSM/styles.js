@@ -1,11 +1,17 @@
 import styled from 'styled-components'
 
 export const OSMContainer = styled.div`
-
-`;
-export const OSMSection = styled.div`
-    margin: 6em;
-    padding: 3em;
+    width: 100%;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
+    align-items: center;
+`;
+export const OSMSection = styled.div`
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    justify-content: space-around;
+    background-color: #fff;
 `;

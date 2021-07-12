@@ -9,7 +9,7 @@ import {
     Link
   } from '../../components/globalComponents'
 
-import {DataSection,DataPicture,DataDescriptionImgSection,DataPictureDescription,DataPageContentContainer} from './styles'
+import {DataSection,DataPicture,DataDescriptionImgSection,DataPictureDescription,DataPageContentContainer, GridContainer, DescriptionsContainer} from './styles'
 import Division from '../../components/Division/index'
 import consolidados from '../../assets/images/Dados/consolidados.png'
 import filtrados01 from '../../assets/images/Dados/filtrados01.png'
@@ -43,10 +43,15 @@ function Dados(){
             <SubTitle>{languageState[language].dados.subTitle1}</SubTitle>
             <br></br>
             <DataDescriptionImgSection>
-              <Description>
-                {languageState[language].dados.description1}
-              </Description>
-              <DataPictureDescription src={preservados}/>
+              <GridContainer>
+                <DescriptionsContainer>
+                  <Description>
+                    {languageState[language].dados.description1}
+                  </Description>
+                </DescriptionsContainer>
+                <DataPictureDescription src={preservados} width={'200px'} height={'130px'}/>
+              </GridContainer>
+
             </DataDescriptionImgSection>
             
             <Link href='/'>{languageState[language].dados.link1}</Link>
@@ -56,13 +61,17 @@ function Dados(){
             <SubTitle>{languageState[language].dados.subTitle2}</SubTitle>
             <br></br>
             <DataDescriptionImgSection>
-              <Description>
+              <GridContainer>
+                <DescriptionsContainer>
+                <Description>
                 {languageState[language].dados.description2A}
-              </Description>
-              <Description>
-                {languageState[language].dados.description2B}
-              </Description>
-              <DataPictureDescription src={filtrados01}/>
+                </Description>                
+                <Description>
+                  {languageState[language].dados.description2B}
+                </Description>
+                </DescriptionsContainer>
+                <DataPictureDescription src={filtrados01} width={'200px'} height={'210px'}/>
+              </GridContainer>
             </DataDescriptionImgSection>
 
             <Link href='/'>{languageState[language].dados.link4}</Link>
@@ -71,16 +80,21 @@ function Dados(){
             <SubTitle>{languageState[language].dados.subTitle3}</SubTitle>
             <br></br>
             <DataDescriptionImgSection>
-              <Description>
-                {languageState[language].dados.description3A}
-              </Description>
-              <Description>
-                {languageState[language].dados.description3B}
-              </Description>
-              <Description>
-                {languageState[language].dados.description3C}
-              </Description>
-              <DataPictureDescription src={filtrados02}/>
+              <GridContainer>
+                <DescriptionsContainer>
+                  <Description>
+                    {languageState[language].dados.description3A}
+                  </Description>
+                  <Description>
+                    {languageState[language].dados.description3B}
+                  </Description>
+                  <Description>
+                    {languageState[language].dados.description3C}
+                  </Description>
+                </DescriptionsContainer>
+                <DataPictureDescription src={consolidados} width={'200px'} height={'300px'}/>
+              </GridContainer>
+
             </DataDescriptionImgSection>
             <Link href='/'>{languageState[language].dados.link6}</Link>
             <Link href='/'>{languageState[language].dados.link7}</Link>

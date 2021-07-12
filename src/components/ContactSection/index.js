@@ -10,7 +10,7 @@ import {
 function ContactSection(props) {
   return (    
     <ContactSectionContainer>        
-        <ContactSectionTextArea rows="10" cols="10">{props.description}</ContactSectionTextArea>
+        <ContactSectionTextArea rows="10" cols="10" placeholder={props.description}/>
         <br></br>
         {props.buttonType === 'Light' &&
             <LightBlueButton>{props.buttonText}</LightBlueButton>

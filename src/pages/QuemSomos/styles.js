@@ -100,4 +100,9 @@ export const ProjectButton = styled.a`
     font-size: 16px;
     font-weight: 800;
     line-height: 20px;
+    transition: all 0.3s ease 0s;
+
+    :hover {
+        background-color: #3CC5FF;
+    }
 `;

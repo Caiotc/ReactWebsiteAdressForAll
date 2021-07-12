@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState, useCallback} from 'react';
 
 import {useLanguage} from '../../context/language';
 import {useLanguageState} from '../../context/languageState';
@@ -23,6 +23,8 @@ import {
 } from './styles'
 
 import Division from '../../components/Division'
+import ModalGeneric from '../../components/ModalGeneric'
+
 
 import player from '../../assets/images/player.png'
 import ilustracao01 from '../../assets/images/ilustracao01.png'
@@ -33,14 +35,26 @@ function Home() {
 
   const {language} = useLanguage();
   const {languageState} = useLanguageState();
+  
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const toggleModal = useCallback(()=>{
+     setModalOpen(!modalOpen);
+  },[modalOpen]);
 
   return (  
     <PageBodyContainer> 
+      <ModalGeneric 
+        isOpen={modalOpen} 
+        setIsOpen={toggleModal} 
+      >
+        <iframe width="760" height="515" src="https://www.youtube.com/embed/WglOrCDKjeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </ModalGeneric>
       <HomeSection>
         <div style={{flex:1, display:'flex', flexDirection: 'column', justifyContent: 'space-around',height:'100%'}}>
           <Title>{languageState[language].homepage.title}</Title>
           <Description>{languageState[language].homepage.descriptionTitle}</Description>
-          <DarkBlueButton >{languageState[language].homepage.button1}</DarkBlueButton>
+          <DarkBlueButton onClick={toggleModal}>{languageState[language].homepage.button1}</DarkBlueButton>
         </div>
         <div style={{flex:1}}>
           <Play src={player} alt={'Vídeo'}/>

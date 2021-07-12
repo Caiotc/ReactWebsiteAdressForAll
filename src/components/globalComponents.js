@@ -6,6 +6,7 @@ export const Title = styled.h1`
     font-size: 75px;
     line-height: 100px;
     color: #000;
+    margin-bottom: 50px;
 `;
 
 export const SubTitle = styled.h1`
@@ -13,6 +14,7 @@ export const SubTitle = styled.h1`
     font-size: 36px;
     line-height: 43px;
     color: #000;
+    margin-bottom: 25px;
 `;
 
 export const Description = styled.div`

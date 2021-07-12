@@ -8,13 +8,14 @@ import {
     SubTitle,
     Description,
     Link
-  } from '../../components/globalComponents'
+} from '../../components/globalComponents'
   
-  import ContactSection from '../../components/ContactSection'; 
-  import {
+import ContactSection from '../../components/ContactSection'; 
+import {
     ContactUsContainer,
     ContactUsSection,
-    ContactUsNetworkImg} from './style'
+    ContactUsNetworkImg
+} from './style'
 
   import logo from '../../assets/images/logo.png'
   
@@ -56,6 +57,7 @@ import {
                    <ContactUsNetworkImg src={logo}></ContactUsNetworkImg>
                    <ContactUsNetworkImg src={logo}></ContactUsNetworkImg>
                    <ContactUsNetworkImg src={logo}></ContactUsNetworkImg>
+                   <ContactUsNetworkImg src={logo}></ContactUsNetworkImg>         
                    <ContactUsNetworkImg src={logo}></ContactUsNetworkImg>                   
                 </Carousel>
             </ContactUsSection>

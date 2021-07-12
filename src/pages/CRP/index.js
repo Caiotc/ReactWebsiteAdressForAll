@@ -23,28 +23,24 @@ function CRP() {
     return (  
         <CRPContainer>
             <CRPSection>
-            <Title>{languageState[language].crp.title}</Title>
-            <SubTitle>{languageState[language].crp.subTitle1}</SubTitle>
-            <Description>
-                {languageState[language].crp.description1A}
-            </Description>
-
-            <Description> 
-                {languageState[language].crp.description1B}
-            </Description>
-
-            <Description>
-                {languageState[language].crp.description1C}
-            </Description>
-
-          
-            <Description>
-                {languageState[language].crp.description1D}
-            </Description>
-                <Link href="https://github.com/OSMBrasil/CRP">
-                    github.com/OSMBrasil/CRP
-                </Link>  
-        </CRPSection>
+                <Title>{languageState[language].crp.title}</Title>
+                <SubTitle>{languageState[language].crp.subTitle1}</SubTitle>
+                <Description>
+                    {languageState[language].crp.description1A}
+                </Description>
+                <Description> 
+                    {languageState[language].crp.description1B}
+                </Description>
+                <Description>
+                    {languageState[language].crp.description1C}
+                </Description>
+                <Description>
+                    {languageState[language].crp.description1D}
+                </Description>
+                    <Link href="https://github.com/OSMBrasil/CRP">
+                        github.com/OSMBrasil/CRP
+                    </Link>  
+            </CRPSection>
         </CRPContainer>
     );
 }
