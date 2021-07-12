@@ -5,8 +5,9 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavbarLogo = styled.img`
-    width: 100px;
+    width: 80px;
     margin: 20px;
+    margin-bottom: 15px;
     color: #fff;
     justify-self: start;
     cursor: pointer;
