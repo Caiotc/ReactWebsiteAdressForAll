@@ -129,7 +129,8 @@ function Navbar() {
               <NavbarItem  
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave}>
-                <NavbarAnchor 
+                <NavbarAnchor
+                href='/quem-somos' 
                  onClick={closeMobileMenu}>
                 {languageState[language].navbar.link1}</NavbarAnchor>
                 <i className='fas fa-angle-down'/>
@@ -138,14 +139,18 @@ function Navbar() {
               <NavbarItem
                 onMouseEnter={onMouseEnterData}
                 onMouseLeave={onMouseLeaveData}>
-                <NavbarAnchor>{languageState[language].navbar.link2}</NavbarAnchor>
+                <NavbarAnchor
+                  href='/dados'
+                >{languageState[language].navbar.link2}</NavbarAnchor>
                 <i className='fas fa-angle-down'/>
                 {dropdownData && <DropDownData/>}
               </NavbarItem>
-              <NavbarItem 
+              <NavbarItem                  
               onMouseEnter={onMouseEnterApi}
               onMouseLeave={onMouseLeaveApi}>
-                <NavbarAnchor>{languageState[language].navbar.link3}</NavbarAnchor>
+                <NavbarAnchor
+                  href='/api-hub' 
+                >{languageState[language].navbar.link3}</NavbarAnchor>
                 <i className='fas fa-angle-down'/>
                 {dropdownApi && <DropDownApi/>}
               </NavbarItem>

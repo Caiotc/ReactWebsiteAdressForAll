@@ -12,6 +12,8 @@ import Estatuto from '../pages/Estatuto';
 import TipoDeDados from '../pages/TiposDeDados';
 import Contribute from '../pages/Contribute';
 import PerguntasFrequentes from '../pages/PerguntasFrequentes';
+import APIHub from '../pages/APIHub';
+import APIPage from '../pages/APIPage';
 
 
 const Routes = () =>(
@@ -28,6 +30,8 @@ const Routes = () =>(
         <Route path='/tipos-de-dados' exact component ={TipoDeDados}/>
         <Route path='/perguntas-frequentes' exact component ={PerguntasFrequentes}/>
         <Route path='/contribua' exact component ={Contribute}/>
+        <Route path='/api-hub' exact component ={APIHub}/>
+        <Route path='/api-page' exact component ={APIPage}/>
     </Switch>
 )
 

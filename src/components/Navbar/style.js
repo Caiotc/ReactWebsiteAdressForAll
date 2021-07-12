@@ -113,6 +113,7 @@ export const NavbarMenu = styled.div`
 export const NavbarItem = styled.li`
   display: flex;
   align-items: center;
+  width: 200px;
   height: 80px;
   :hover{
     background-color: #1888ff;

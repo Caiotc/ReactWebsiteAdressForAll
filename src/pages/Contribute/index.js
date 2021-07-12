@@ -29,7 +29,6 @@ import {
                 <Title>
                     {languageState[language].contribua.title}
                 </Title>
-                <br></br>
                 <Description>
                     {languageState[language].contribua.descriptionTitle1}
                 </Description>
@@ -41,7 +40,10 @@ import {
                 </Description>
             </ContributeSection>            
 
-            <ContactSection buttonText={languageState[language].contribua.button} description ={languageState[language].contribua.textArea} buttonType="Light"></ContactSection>
+            <ContactSection 
+            buttonText={languageState[language].contribua.button} 
+            description ={languageState[language].contribua.textArea} 
+            buttonType="Light"></ContactSection>
 
             <ContributeSection>
                 <SubTitle>
