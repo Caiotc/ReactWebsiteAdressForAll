@@ -5,7 +5,7 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavbarLogo = styled.img`
-    width: 150px;
+    width: 100px;
     margin: 20px;
     color: #fff;
     justify-self: start;
@@ -13,6 +13,9 @@ export const NavbarLogo = styled.img`
     text-decoration: none;
     font-size: 2rem;
 `;
+export const NavbarImgHolder = styled.div`
+ 
+`
 
 export const NavbarContent = styled.div`
     
@@ -100,7 +103,7 @@ export const NavbarMenu = styled.div`
     
 
     &.active {
-        background: #242222;
+        background: #0B64E1;
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;

@@ -15,7 +15,8 @@ import {
     BuguerMenu,
     NavbarMenuIcon,
     NavbarMenu,
-    NavbarItem
+    NavbarItem,
+    NavbarImgHolder
 } from './style'
 import DropDownWhoWeAre from '../Dropdown/DropDownWhoWeAre'; 
 import DropDownData from '../Dropdown/DropDownData';
@@ -121,11 +122,11 @@ function Navbar() {
             <NavbarMenu className={click?
             'active':
             ''}>
-              <NavbarItem>
+              <NavbarImgHolder>
                 <a href ='/'>
                 <NavbarLogo  src={logo} alt={'Address for all'}/> 
                 </a>
-              </NavbarItem>
+              </NavbarImgHolder>
               <NavbarItem  
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave}>
