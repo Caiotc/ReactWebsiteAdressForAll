@@ -6,8 +6,7 @@ export const NavbarContainer = styled.div`
 
 export const NavbarLogo = styled.img`
     width: 80px;
-    margin: 20px;
-    margin-bottom: 15px;
+    margin: 18px;    
     color: #fff;
     justify-self: start;
     cursor: pointer;
