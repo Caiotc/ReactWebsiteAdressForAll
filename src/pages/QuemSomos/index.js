@@ -1,55 +1,165 @@
+import {useLanguage} from '../../context/language';
+import {useLanguageState} from '../../context/languageState';
+
+import Carousel from 'react-elastic-carousel'
+
 import {
   Title,
   SubTitle,
   Description,
-  DarkBlueButton
 } from '../../components/globalComponents'
 
 import {
   PageBodyContainer,
-  HomeSection,
-  Play,
-  PictureContainer,
-  Picture,
-  LocationsSection,
-  LocationsContainer,
-  Location,
-  Newsletter
+  WhoWeAreSection,
+  ImgContainer,
+  MemberImg,
+  PartnerImg,
+  ProjectCardsContainer,
+  ProjectCard,
+  ProjectImg,
+  ProjectTitle,
+  ProjectDescription,
+  ProjectButton
 } from './styles'
 
 import Division from '../../components/Division'
-import Footer from '../../components/Footer'
+
+import logo from '../../assets/images/logo.png'
 
 
-import player from '../../assets/images/player.png'
 
 function QuemSomos() {
+
+  const {language} = useLanguage();
+  const {languageState} = useLanguageState();
+  
   return (  
     <PageBodyContainer> 
-      <Title>Quem Somos?</Title>
-      <Description>O instituto de Teconologia Geo-Sociais AddressForAlL tem por objetivo a defesa dos dados abertos e da melhoria social através do bom uso da tecnologia com ênfase nas tecnologias geo-espaciais.</Description>
-      <SubTitle>Histórico</SubTitle>
-      <Description>Como parte do seu trabalho no apoio do projeto de mapa colaborativo OpenStreetMap, durante 3 anos, os fundadores do Instituto tentaram motivar o governo Brasileiro a criar uma base de dados de endereços aberta e colaborativa no Brasil.</Description>
-      <Description>Vendo que o projeto não passava da ideação, devido à falta de vontade ou força política, Thierry Jean, Filipe Rocha e Peter Krauss decidiram lançar o projeto "Endereço para todos" em 2020 no âmbito de uma associação sem fins lucrativos chamada "Instituto de Tecnologias Geo-Sociais AddressForAll".</Description>      
-      <SubTitle>Evolução</SubTitle>
-      <Description>A criação do Instituto permitiu aos seus criadores de juntar debaixo de um mesmo guarda-chuva legal alguns projetos de pesquisas e de melhoria social, sempre com uso forte de geolocalização.</Description>      
-      <SubTitle>Conselho Consultivo</SubTitle>
-      <Description>O Conselho consultivo é constituído por membros efetivos e honorários de notória competência e reputação em suas áreas, e norteia a atuação do Instituto.</Description>      
-      <Title>CARROÇA</Title>
-      <SubTitle>Diretoria Executiva</SubTitle>
-      <Description>Associados efetivos eleitos.</Description>
-      <Title>CARROÇA</Title>
-      <SubTitle>Conselho Técnico</SubTitle>
-      <Description>Associados e terceiros atuando como corpo técnico do Instituto.</Description>
-      <Title>CARROÇA</Title>
-      <SubTitle>Parceiros</SubTitle>
-      <Title>CARROÇA</Title>
-
-      <Division description={'No link abaixo você pode consultar uma versão resumida de nosso estatuto social, bem como acessar as diversas versões de nosso estatuto em inteiro teor.'} buttonText={'Página do Estatuto'} buttonType={'Light'}/>
       
-      <SubTitle>Nossos Projetos</SubTitle>
-      <Description>Associados e terceiros atuando como corpo técnico do Instituto.</Description>
-      <Title>CARDS</Title>
+      <WhoWeAreSection>
+        <Title>{languageState[language].quemsomos.title}</Title>
+        <br></br>
+        <Description>
+          {languageState[language].quemsomos.descriptionTitle}
+        </Description>
+      </WhoWeAreSection>
+      
+      <WhoWeAreSection>      
+        <SubTitle>{languageState[language].quemsomos.subTitle1}</SubTitle>
+        <br></br>
+        <Description>
+          {languageState[language].quemsomos.description1A}
+        </Description>
+        <Description>
+          {languageState[language].quemsomos.description1B}
+        </Description>
+      </WhoWeAreSection>
+      
+      <WhoWeAreSection>
+        <SubTitle>{languageState[language].quemsomos.subTitle2}</SubTitle>
+        <br></br>
+        <Description>
+          {languageState[language].quemsomos.description2}
+        </Description>
+      </WhoWeAreSection>
+      
+      <WhoWeAreSection>
+        <SubTitle>{languageState[language].quemsomos.subTitle3}</SubTitle>
+        <br></br>
+        <Description>
+          {languageState[language].quemsomos.description3}
+        </Description>
+      <ImgContainer>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+        </ImgContainer>
+      </WhoWeAreSection>
+      
+      <WhoWeAreSection>
+        <SubTitle>{languageState[language].quemsomos.subTitle4}</SubTitle>
+        <br></br>
+        <Description>
+          {languageState[language].quemsomos.description4}
+        </Description>
+        <ImgContainer>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+        </ImgContainer>
+      </WhoWeAreSection>
+      
+      <WhoWeAreSection>
+        <SubTitle>{languageState[language].quemsomos.subTitle5}</SubTitle>
+        <br></br>
+        <Description>
+          {languageState[language].quemsomos.description5}
+        </Description>
+        <ImgContainer>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+          <MemberImg src={logo} alt={'Diretoria'}/>
+        </ImgContainer>
+      </WhoWeAreSection>
+      
+      <WhoWeAreSection>
+        <SubTitle>{languageState[language].quemsomos.subTitle6}</SubTitle>
+        <Carousel itemsToShow={4} pagination={false} style={{marginTop:'30px'}}>
+          <PartnerImg src={logo} alt={'Parceiro'}/>
+          <PartnerImg src={logo} alt={'Parceiro'}/>
+          <PartnerImg src={logo} alt={'Parceiro'}/>
+          <PartnerImg src={logo} alt={'Parceiro'}/>
+          <PartnerImg src={logo} alt={'Parceiro'}/>
+        </Carousel>
+      </WhoWeAreSection>
+      
+
+      <Division description={languageState[language].quemsomos.divison1} buttonText={languageState[language].quemsomos.divisonButon1} buttonType={'LightLink'} to={'/estatuto'} />
+      <WhoWeAreSection>
+        <SubTitle>{languageState[language].quemsomos.subTitle7}</SubTitle>
+        <br></br>
+        <Description>
+          {languageState[language].quemsomos.description7}
+        </Description>
+        <ProjectCardsContainer>
+          <ProjectCard>
+            <ProjectImg src={logo} alt={'Parceiro'}/>
+            <ProjectTitle>{languageState[language].quemsomos.project1Title}</ProjectTitle>
+            <ProjectDescription>{languageState[language].quemsomos.project1Description}</ProjectDescription>
+            <ProjectButton href={'/'}>{languageState[language].quemsomos.project1Button}</ProjectButton>
+          </ProjectCard>
+          <ProjectCard>
+            <ProjectImg src={logo} alt={'Parceiro'}/>
+            <ProjectTitle>{languageState[language].quemsomos.project2Title}</ProjectTitle>
+            <ProjectDescription>{languageState[language].quemsomos.project2Description}</ProjectDescription>
+            <ProjectButton href={'#'}>{languageState[language].quemsomos.project2Button}</ProjectButton>
+          </ProjectCard>
+          <ProjectCard>
+              <ProjectImg src={logo} alt={'Parceiro'}/>
+              <ProjectTitle>{languageState[language].quemsomos.project3Title}</ProjectTitle>
+            <ProjectDescription>{languageState[language].quemsomos.project3Description}</ProjectDescription>
+            <ProjectButton href={'#'}>{languageState[language].quemsomos.project3Button}</ProjectButton>
+          </ProjectCard>
+          <ProjectCard>
+            <ProjectImg src={logo} alt={'Parceiro'}/>
+            <ProjectTitle>{languageState[language].quemsomos.project4Title}</ProjectTitle>
+            <ProjectDescription>{languageState[language].quemsomos.project4Description}</ProjectDescription>
+            <ProjectButton href={'#'}>{languageState[language].quemsomos.project4Button}</ProjectButton>
+          </ProjectCard>
+          <ProjectCard>
+            <ProjectImg src={logo} alt={'Parceiro'}/>
+            <ProjectTitle>{languageState[language].quemsomos.project5Title}</ProjectTitle>
+            <ProjectDescription>{languageState[language].quemsomos.project5Description}</ProjectDescription>
+            <ProjectButton href={'#'}>{languageState[language].quemsomos.project5Button}</ProjectButton>
+          </ProjectCard>
+        </ProjectCardsContainer>
+      </WhoWeAreSection>
+
       
     </PageBodyContainer> 
   );
