@@ -50,6 +50,5 @@ export const ApiObject = [
         title:'API 09 - Indefinido',
         path:'/api-page',
         description:'Página onde será inserido um serviço baseado em requisição (API).'
-
     }
 ]

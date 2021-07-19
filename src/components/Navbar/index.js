@@ -16,7 +16,10 @@ import {
     NavbarMenuIcon,
     NavbarMenu,
     NavbarItem,
-    NavbarImgHolder
+    NavbarImgHolder,
+    NavbarIcons,
+    NavbarMaterialIcon,
+    NavBarBurguer
 } from './style'
 import DropDownWhoWeAre from '../Dropdown/DropDownWhoWeAre'; 
 import DropDownData from '../Dropdown/DropDownData';
@@ -113,10 +116,10 @@ function Navbar() {
                        
             <NavbarMenuIcon
               onClick={handleClick}>
-                <i className={click 
+                <NavBarBurguer className={click 
                 ?
                 'fas fa-times':
-                'fas fa-bars'}></i>
+                'fas fa-bars'}></NavBarBurguer>
             </NavbarMenuIcon>
 
             <NavbarMenu className={click?
@@ -134,7 +137,7 @@ function Navbar() {
                 href='/quem-somos' 
                  onClick={closeMobileMenu}>
                 {languageState[language].navbar.link1}</NavbarAnchor>
-                <i className='fas fa-angle-down'/>
+                <NavbarMaterialIcon className='fas fa-angle-down'/>
                 {dropDown && <DropDownWhoWeAre />}
               </NavbarItem>
               <NavbarItem
@@ -143,7 +146,7 @@ function Navbar() {
                 <NavbarAnchor
                   href='/dados'
                 >{languageState[language].navbar.link2}</NavbarAnchor>
-                <i className='fas fa-angle-down'/>
+                <NavbarMaterialIcon className='fas fa-angle-down'/>
                 {dropdownData && <DropDownData/>}
               </NavbarItem>
               <NavbarItem                  
@@ -152,21 +155,24 @@ function Navbar() {
                 <NavbarAnchor
                   href='/api-hub' 
                 >{languageState[language].navbar.link3}</NavbarAnchor>
-                <i className='fas fa-angle-down'/>
+                <NavbarMaterialIcon className='fas fa-angle-down'/>
                 {dropdownApi && <DropDownApi/>}
               </NavbarItem>
               <NavbarItem>  
                 <NavbarAnchor href='/contato'>{languageState[language].navbar.link4}</NavbarAnchor>   
               </NavbarItem>
+              <NavbarIcons>
+                <NavbarIcon src={git} alt={'Github'}/>
+                <NavbarIcon src={dadosabertos} alt={'Dados abertos'}/>                
+              </NavbarIcons>
+              <LanguageSelect onChange={(e)=>{onLanguageSelectHandler(e.target.value)}}>
+                  <LanguageOption value="BR">BR</LanguageOption>
+                  <LanguageOption value="EN">EN</LanguageOption>
+              </LanguageSelect>
             </NavbarMenu>
 
-            <NavbarIcon src={git} alt={'Github'}/>
-            <NavbarIcon src={dadosabertos} alt={'Dados abertos'}/>
    
-            <LanguageSelect onChange={(e)=>{onLanguageSelectHandler(e.target.value)}}>
-              <LanguageOption value="BR">BR</LanguageOption>
-              <LanguageOption value="EN">EN</LanguageOption>
-            </LanguageSelect>
+
         </NavbarContent>
     </NavbarContainer>
   );

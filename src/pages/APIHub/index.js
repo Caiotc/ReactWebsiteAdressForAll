@@ -24,12 +24,12 @@ function APIHub() {
                                      
   }
   const [isHub,setHub] = useState(true);
-  const apiPageProps = {
+  const [apiPageProps,setApiPageProps] = useState({
     apiName:'',
     apiNumber:'',
     apiDescription:'',
     apiLink:''
-  }
+  }) ;
 
 
     return (
@@ -51,10 +51,12 @@ function APIHub() {
                       console.log('clicado')
                       console.log(isHub)
                       console.log(index)
-                      apiPageProps.apiNumber = index;
-                      apiPageProps.apiName = item.title;
-                      apiPageProps.apiDescription = item.description;
-                      setHub(false);   
+                      setApiPageProps({    
+                      apiName:item.title,
+                      apiNumber:index,
+                      apiDescription:item.description,
+                      apiLink:''})                      
+                      setHub(!isHub);   
                     }} key={index} >
                         {item.title}
                     </APIHubAnchor>);
