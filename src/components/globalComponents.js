@@ -3,7 +3,7 @@ import { Link as RouterLink } from 'react-router-dom';
 
 export const Title = styled.h1`
     font-weight: 800;
-    font-size: 75px;
+    font-size: 3em;
     line-height: 100px;
     color: #000;
     margin-bottom: 50px;

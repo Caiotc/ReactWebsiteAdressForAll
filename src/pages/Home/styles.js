@@ -9,32 +9,43 @@ export const PageBodyContainer = styled.div`
 `;
 
 export const HomeSection = styled.section`
-    display: flex;
-    flex:1;
-    height: 500px;
+    margin-top: 3em;
     width: 85%;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
+
+    @media(max-width: 800px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+`;
+
+export const SectionContent = styled.section`
+    flex:1; 
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    height:100%;  
+
+    @media(max-width: 800px) {
+        justify-content: center;
+        align-items: center;
+    }
+
 `;
 
 export const Play = styled.img`
     width: 100%;
     height: 100%;
     padding: 10px;
-`;
-
-export const PictureContainer = styled.div`
-    flex:1;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-`;
-
-export const Picture = styled.img`
-    width: 55%;
-    height: 50%;
-    padding: 10px;
+    @media(max-width: 800px) {
+        display: none;
+    }
 `;
 
 export const LocationsSection = styled.div`
@@ -45,7 +56,6 @@ export const LocationsSection = styled.div`
     align-items: center;
     background-color: #0B64E1;
     margin-top: 2em;
-    margin-bottom: 100px;
 `;
 
 export const LocationsContainer = styled.div`
@@ -54,6 +64,12 @@ export const LocationsContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 100%;
+
+    @media(max-width: 800px) {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
 `;
 
 export const Location = styled.div`    
@@ -65,7 +81,26 @@ export const Location = styled.div`
     display: flex;
     justify-content:center;
     align-items:center;
+    margin:10px;
+
 `;
+
+export const PictureContainer = styled.div`
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    @media(max-width: 800px) {
+        display:none;
+    }
+`;
+
+export const Picture = styled.img`
+    width: 55%;
+    height: 50%;
+    padding: 10px;
+`;
+
 
 export const Newsletter = styled.button`    
     width: 100%;
