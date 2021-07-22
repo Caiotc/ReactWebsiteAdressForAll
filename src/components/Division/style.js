@@ -21,7 +21,7 @@ export const DivisionContent = styled.div`
     justify-content:space-between;
     align-items: center;
 
-    @media(max-width: 800px) {
+    @media(max-width: 960px) {
         flex-direction:column;
         justify-content: center;
         align-items:center;
@@ -47,7 +47,7 @@ export const DivisionInfo = styled.div`
     flex-direction: column;
     justify-content:space-evenly;
 
-    @media(max-width: 800px) {
+    @media(max-width: 960px) {
         margin-left: 0px;
         align-items:center;
     }

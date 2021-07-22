@@ -18,7 +18,7 @@ export const HomeSection = styled.section`
     align-items: center;
     background-color: #fff;
 
-    @media(max-width: 800px) {
+    @media(max-width: 960px) {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -32,7 +32,7 @@ export const SectionContent = styled.section`
     justify-content:space-around;
     height:100%;  
 
-    @media(max-width: 800px) {
+    @media(max-width: 960px) {
         justify-content: center;
         align-items: center;
     }
@@ -43,7 +43,7 @@ export const Play = styled.img`
     width: 100%;
     height: 100%;
     padding: 10px;
-    @media(max-width: 800px) {
+    @media(max-width: 960px) {
         display: none;
     }
 `;
@@ -65,7 +65,7 @@ export const LocationsContainer = styled.div`
     align-items: center;
     height: 100%;
 
-    @media(max-width: 800px) {
+    @media(max-width: 960px) {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
@@ -90,7 +90,7 @@ export const PictureContainer = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
-    @media(max-width: 800px) {
+    @media(max-width: 960px) {
         display:none;
     }
 `;

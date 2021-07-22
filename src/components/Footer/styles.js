@@ -15,7 +15,7 @@ export const FooterContent = styled.div`
     justify-content: center;
     align-items: center;
 
-    @media(max-width: 800px) {
+    @media(max-width: 960px) {
         flex-direction: column;
     }
 `;
@@ -24,7 +24,7 @@ export const LogoContainer = styled.div`
     width: 250px;
     width: 200px;
    
-    @media(max-width: 800px) {
+    @media(max-width: 960px) {
         margin-bottom:15px;
     }
 `;
@@ -44,7 +44,7 @@ export const SiteMapContainer = styled.div`
     line-height: 2em;
     letter-spacing: 0;
     text-decoration: none;
-    @media(max-width: 800px) {
+    @media(max-width: 960px) {
         display:flex;
         flex-direction: column;
     }
@@ -55,7 +55,7 @@ export const SiteMapColumn = styled.div`
     margin-left: 5%;
     float: left;
 
-    @media(max-width: 800px) {
+    @media(max-width: 960px) {
         width: 100%;
         text-align:center;
     }
