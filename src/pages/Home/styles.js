@@ -10,6 +10,7 @@ export const PageBodyContainer = styled.div`
 
 export const HomeSection = styled.section`
     margin-top: 3em;
+    margin-bottom: 3em;
     width: 85%;
     padding: 1em;
     display: flex;
@@ -119,6 +120,7 @@ export const Newsletter = styled.button`
     font-weight:700;
     font-size: 24px;
     transition: all 0.3s ease 0s;
+    
     :hover{
         border: solid 1px #000;
         color: #000;   

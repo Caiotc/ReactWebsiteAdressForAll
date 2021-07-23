@@ -9,10 +9,8 @@ import {
     NavbarContent,
     NavbarIcon,
     NavbarLogo,
-    NavbarLinkIconWrapper,
     LanguageSelect,
     LanguageOption,
-    BuguerMenu,
     NavbarMenuIcon,
     NavbarMenu,
     NavbarItem,
@@ -27,7 +25,6 @@ import DropDownApi from '../Dropdown/DropDownApi';
 import logo from '../../assets/images/logo.png'
 import git from '../../assets/images/git.png'
 import dadosabertos from '../../assets/images/dadosabertos.png'
-import { drop } from 'lodash';
 
 
 
@@ -108,7 +105,7 @@ function Navbar() {
 
   const onLanguageSelectHandler = useCallback((selectedLanguage) => {
     setAppLanguage(selectedLanguage);
-  }, []);
+  }, [setAppLanguage]);
 
   return (    
     <NavbarContainer>

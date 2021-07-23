@@ -1,8 +1,8 @@
-import React, { useRef, useCallback } from 'react';
+import React, {useCallback } from 'react';
 
 import {DarkBlueButton} from '../globalComponents'
 
-import { ModalContainer, ModalContainerButton  } from './styles';
+import { ModalContainer } from './styles';
 import Modal from '../Modal';
 
 

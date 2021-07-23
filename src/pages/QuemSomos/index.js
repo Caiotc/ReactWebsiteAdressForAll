@@ -47,7 +47,7 @@ function QuemSomos() {
     if(width<960){
       setCarouselQuant(1);
     };
-  },[]);
+  },[width]);
 
   
   return (  

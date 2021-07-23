@@ -1,5 +1,5 @@
-
 import styled from 'styled-components'
+
 export const DataPageContentContainer = styled.div`
     width: 100%;
     background-color: #fff;
@@ -28,8 +28,8 @@ export const DataPictureDescription = styled.img`
     height: ${props => props.height ? props.height : '130px'};
     grid-area: 'image';
     @media screen and (max-width: 960px) {        
-        display: none;
-  }
+        margin: 10px 0 15px 0;
+    }
 `;
 
 export const DescriptionsContainer = styled.div`
@@ -44,5 +44,10 @@ export const GridContainer = styled.div`
     grid-template-areas: 'descripts descripts image';
     width: 100%;
     align-items: center;
+    @media screen and (max-width: 960px) {        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between
+    }
 `;
 

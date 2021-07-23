@@ -3,33 +3,37 @@ import { Link as RouterLink } from 'react-router-dom';
 
 export const Title = styled.h1`
     font-weight: 800;
-    font-size: 3em;
+    font-size: 4em;
     line-height: 100px;
     color: #000;
     margin-bottom: 50px;
     @media screen and (max-width: 960px) {        
-        font-size: 2em;
+        font-size: 3em;
   }
 
 `;
 
 export const SubTitle = styled.h1`
-    font-weight: 800;
-    font-size: 36px;
+    font-weight: 600;
+    font-size: 3em;
     line-height: 43px;
     color: #000;
     margin-bottom: 25px;
+    @media screen and (max-width: 960px) {        
+        font-size: 2em;
+    }
 `;
 
 export const Description = styled.div`
     font-weight: 400;
     font-size: 2em;
-    line-height: 35px;
+    line-height: 1.5em;
     color: #544837;
     margin-bottom: 1em;
+    text-align:justify;
     @media screen and (max-width: 960px) {        
-        
-  }
+        font-size: 2em;
+    }
 
 `;
 

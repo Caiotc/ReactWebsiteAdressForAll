@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import {MenuItemsData,MenuItemsWhoweAre} from './MenuItems.js';
+import {MenuItemsWhoweAre} from './MenuItems.js';
 import {
     DropDownMenu,
     DropDownMenuItem,
@@ -8,8 +8,6 @@ import {
 function DropDownWhoWeAre(props){
     const [click,setClick] = useState(false);
     const handleClick = () => setClick(!click);
-    let result = (<></>);
-
     
     return(
         <>

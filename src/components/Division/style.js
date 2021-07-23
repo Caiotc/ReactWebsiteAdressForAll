@@ -60,7 +60,9 @@ export const Description = styled.h1`
     line-height: 30px;
     margin-bottom: 2em;
     margin-top: 2em;
-
+    @media(max-width: 960px) {
+        text-align: justify;
+    }
 `;
 
 

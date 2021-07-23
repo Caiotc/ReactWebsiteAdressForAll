@@ -94,7 +94,7 @@ export const ProjectTitle = styled.h1`
     color: #2F281E;
 `;
 
-export const ProjectDescription = styled.text`
+export const ProjectDescription = styled.h1`
     margin: 20px 0 0 0;
     font-size: 20px;
     line-height: 25px;

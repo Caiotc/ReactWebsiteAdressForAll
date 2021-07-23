@@ -7,7 +7,6 @@ import {
     Title,
     SubTitle,
     Description,
-    DarkBlueButton,
     Link
   } from '../../components/globalComponents'
 
@@ -15,8 +14,6 @@ import {DataSection,DataPicture,DataDescriptionImgSection,DataPictureDescription
 import Division from '../../components/Division/index'
 import consolidados from '../../assets/images/Dados/consolidados.png'
 import filtrados01 from '../../assets/images/Dados/filtrados01.png'
-import filtrados02 from '../../assets/images/Dados/filtrados02.png'
-import filtrados03 from '../../assets/images/Dados/filtrados03.png'
 import modelo01 from '../../assets/images/Dados/modelo01.svg'
 import modelo02 from '../../assets/images/Dados/modelo02.svg'
 import preservados from '../../assets/images/Dados/preservados.png'
@@ -75,6 +72,7 @@ function Dados(){
                             {item.title}
                         </Link>);
                     }else{
+                      <></>
                     }
                    
                   })
@@ -110,6 +108,7 @@ function Dados(){
                             {item.title}
                         </Link>);
                     }else{
+                      <></>
                     }
                    
                   })
@@ -147,6 +146,7 @@ function Dados(){
                             {item.title}
                         </Link>);
                     }else{
+                      <></>
                     }
                    
                   })
