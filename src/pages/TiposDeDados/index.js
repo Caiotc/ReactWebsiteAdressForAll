@@ -22,7 +22,6 @@ function TipoDeDados() {
     <DataTypeContainer>
       <DataTypeSection>
         <Title>{languageState[language].tiposdedados.title}</Title>
-        <br></br>            
         <Description>           
           {languageState[language].tiposdedados.descriptionTitle}
         </Description>                    

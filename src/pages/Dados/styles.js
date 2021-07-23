@@ -27,6 +27,9 @@ export const DataPictureDescription = styled.img`
     width: ${props => props.width ? props.width : '150px'};
     height: ${props => props.height ? props.height : '130px'};
     grid-area: 'image';
+    @media screen and (max-width: 960px) {        
+        display: none;
+  }
 `;
 
 export const DescriptionsContainer = styled.div`

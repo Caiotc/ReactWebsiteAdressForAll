@@ -24,7 +24,7 @@ function Footer() {
                 <SiteMapColumn>
                     <FooterLink href={'/dados'}>{languageState[language].footer.link3}</FooterLink>
                     <br></br>
-                    <FooterLink href={'/api'}>{languageState[language].footer.link4}</FooterLink>
+                    <FooterLink href={'/api-hub'}>{languageState[language].footer.link4}</FooterLink>
                 </SiteMapColumn>
                 <SiteMapColumn>
                     <FooterLink href={'/contato'}>{languageState[language].footer.link5}</FooterLink>

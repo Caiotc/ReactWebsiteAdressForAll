@@ -1,8 +1,9 @@
+import React, {useState,useEffect} from 'react'
 import Carousel from 'react-elastic-carousel'
 
 import {useLanguage} from '../../context/language';
 import {useLanguageState} from '../../context/languageState';
-
+import WindowDimensions from '../../utils/WindowDimensions';
 import {
     Title,
     SubTitle,
@@ -23,7 +24,15 @@ import {
 
     const {language} = useLanguage();
     const {languageState} = useLanguageState();
+    const { width } = WindowDimensions();
 
+    const [carouselQuant,setCarouselQuant] = useState(4);
+  
+    useEffect(()=>{
+        if(width<960){
+          setCarouselQuant(1);
+        };
+      },[]);
     return (  
         <ContactUsContainer>
             <ContactUsSection>
@@ -53,13 +62,13 @@ import {
                 <Description>
                     {languageState[language].contato.description2}
                 </Description>
-                <Carousel itemsToShow={4} pagination={false} style={{marginTop:'30px'}}>
+                <Carousel itemsToShow={carouselQuant} pagination={false} style={{marginTop:'30px'}}>
                    <ContactUsNetworkImg src={logo}></ContactUsNetworkImg>
                    <ContactUsNetworkImg src={logo}></ContactUsNetworkImg>
                    <ContactUsNetworkImg src={logo}></ContactUsNetworkImg>
                    <ContactUsNetworkImg src={logo}></ContactUsNetworkImg>         
                    <ContactUsNetworkImg src={logo}></ContactUsNetworkImg>                   
-                </Carousel>
+                </Carousel>           
             </ContactUsSection>
                         
         </ContactUsContainer>

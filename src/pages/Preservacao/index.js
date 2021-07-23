@@ -33,6 +33,8 @@ function Preservacao() {
                     {languageState[language].preservacaodigital.description1B}
                 </Description>
                 <Link href='https://github.com/AddressForAll/digital-preservation'>git.AddressForAll.org/digital-preservation</Link>
+            </PreservationSection>
+            <PreservationSection>
                 <Description>
                     {languageState[language].preservacaodigital.description1C}
                 </Description>
@@ -43,20 +45,26 @@ function Preservacao() {
                     {languageState[language].preservacaodigital.description1E}
                 </Description>
 
-                <Link href='https://git.AddressForAll.org/digital-preservation-BR'>git.AddressForAll.org/digital-preservation-BR</Link>
+                <Link href='https://git.AddressForAll.org/digital-preservation-BR'>
+                    git.AddressForAll.org/digital-preservation-BR
+                </Link>
+            </PreservationSection>
+            <PreservationSection>
                 <Description>
                     {languageState[language].preservacaodigital.description1F}
                 </Description>
-                <Link href='api-test.AddressForAll.org/v1.htm/vw_core/origin/BR'>api-test.AddressForAll.org/v1.htm/vw_core/origin/BR</Link>
+                <Link href='api-test.AddressForAll.org/v1.htm/vw_core/origin/BR'>
+                    api-test.AddressForAll.org
+                </Link>
             
                 <Description>
                     {languageState[language].preservacaodigital.description1G}
                 </Description>
                 <Link href='https://api-test.AddressForAll.org/v1.htm/vw_core/donor/BR'>
-                api-test.AddressForAll.org/v1.htm/vw_core/donor/BR
+                api-test.AddressForAll.org
 
                 </Link>  
-            </PreservationSection>
+                </PreservationSection>
         </PreservationContainer>
     );
 }

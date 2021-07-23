@@ -6,9 +6,10 @@ export const ApiPageContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 `;
 export const APIPageSection = styled.div`
-    margin-top: 3em;
+    margin-top: 1em;
     display: flex;
     flex-direction: column;
     width: 85%;

@@ -20,8 +20,7 @@ function Estatuto() {
     return (  
         <StatuteContainer>
             <StatuteSection>
-            <Title>{languageState[language].estatuto.title}</Title>
-            <br></br>            
+              <Title>{languageState[language].estatuto.title}</Title>
             <Description>           
               {languageState[language].estatuto.descriptionTitle}
             </Description>                    

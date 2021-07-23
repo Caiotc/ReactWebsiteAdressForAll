@@ -60,11 +60,13 @@ export const LanguageSelect = styled.select`
     font-weight: 500;
     color:#fff;
     margin-right:5rem;
+    transform: translateY(-2px);
     border:none;
     :hover{
     background-color: #1888ff;
     border-radius: 2px;
     transition: all 0.2s ease-out;
+    
   }
   @media screen and (max-width: 960px) {        
         position: absolute;

@@ -30,6 +30,9 @@ export const QandADescription = styled.p`
     line-height: 40px;
     color: #544837;
     margin-bottom: 1em;
+    @media screen and (max-width: 960px) {        
+        font-size: 1.5em;
+    }
 `;
 
 export const QandAList = styled.ul`
@@ -42,4 +45,5 @@ export const QandAListItem = styled.li`
 export const QandAAnchor = styled.a`
     text-decoration: none;
     color: #3CC5FF;
+
 `

@@ -1,6 +1,8 @@
 import {useLanguage} from '../../context/language';
 import {useLanguageState} from '../../context/languageState';
-
+import React,{useState} from 'react';
+import { ApiObject } from '../APIHub/APIs';
+import APIPage from '../APIPage';
 import {
     Title,
     SubTitle,
@@ -23,12 +25,17 @@ function Dados(){
 
     const {language} = useLanguage();
     const {languageState} = useLanguageState();
-
+    const [isHub,setHub] = useState(true);
+    const [apiPageProps,setApiPageProps] = useState({
+      apiName:'',
+      apiNumber:'',
+      apiDescription:'',
+      apiLink:''
+    }) ;
     return(
-        <DataPageContentContainer>
+        <div>{isHub?<DataPageContentContainer>
           <DataSection>
               <Title>{languageState[language].dados.title}</Title>
-              <br></br>
               <Description>
                 {languageState[language].dados.descriptionTitleA}
               </Description>
@@ -41,7 +48,6 @@ function Dados(){
             </DataPicture>
 
             <SubTitle>{languageState[language].dados.subTitle1}</SubTitle>
-            <br></br>
             <DataDescriptionImgSection>
               <GridContainer>
                 <DescriptionsContainer>
@@ -53,13 +59,29 @@ function Dados(){
               </GridContainer>
 
             </DataDescriptionImgSection>
-            
-            <Link href='/'>{languageState[language].dados.link1}</Link>
-            <Link href='/'>{languageState[language].dados.link2}</Link>            
-            <Link href='/'>{languageState[language].dados.link3}</Link>                                        
+            <DataSection>
+            {
+                  ApiObject.map((item,index) =>{
+                    if(index<3){
+                      return(
+                        <Link onClick={()=>{
+                          setApiPageProps({    
+                          apiName:item.title,
+                          apiNumber:index,
+                          apiDescription:item.description,
+                          apiLink:''})                      
+                          setHub(!isHub);   
+                        }} key={index} >
+                            {item.title}
+                        </Link>);
+                    }else{
+                    }
+                   
+                  })
+                }   
+            </DataSection>                                     
 
             <SubTitle>{languageState[language].dados.subTitle2}</SubTitle>
-            <br></br>
             <DataDescriptionImgSection>
               <GridContainer>
                 <DescriptionsContainer>
@@ -73,12 +95,26 @@ function Dados(){
                 <DataPictureDescription src={filtrados01} width={'200px'} height={'210px'}/>
               </GridContainer>
             </DataDescriptionImgSection>
-
-            <Link href='/'>{languageState[language].dados.link4}</Link>
-            <Link href='/'>{languageState[language].dados.link5}</Link>
-
+            {
+                  ApiObject.map((item,index) =>{
+                    if(index>2 && index<5){
+                      return(
+                        <Link onClick={()=>{
+                          setApiPageProps({    
+                          apiName:item.title,
+                          apiNumber:index,
+                          apiDescription:item.description,
+                          apiLink:''})                      
+                          setHub(!isHub);   
+                        }} key={index} >
+                            {item.title}
+                        </Link>);
+                    }else{
+                    }
+                   
+                  })
+                }   
             <SubTitle>{languageState[language].dados.subTitle3}</SubTitle>
-            <br></br>
             <DataDescriptionImgSection>
               <GridContainer>
                 <DescriptionsContainer>
@@ -96,17 +132,32 @@ function Dados(){
               </GridContainer>
 
             </DataDescriptionImgSection>
-            <Link href='/'>{languageState[language].dados.link6}</Link>
-            <Link href='/'>{languageState[language].dados.link7}</Link>
+            {
+                  ApiObject.map((item,index) =>{
+                    if(index>4 && index<7){
+                      return(
+                        <Link onClick={()=>{
+                          setApiPageProps({    
+                          apiName:item.title,
+                          apiNumber:index,
+                          apiDescription:item.description,
+                          apiLink:''})                      
+                          setHub(!isHub);   
+                        }} key={index} >
+                            {item.title}
+                        </Link>);
+                    }else{
+                    }
+                   
+                  })
+                }   
             </DataSection>
-                  
-
+                
             <Division description={languageState[language].dados.divison1} 
-            buttonText={languageState[language].dados.divisonButon1} buttonType={'LightLink'} to={'/api'} ></Division>
+            buttonText={languageState[language].dados.divisonButon1} buttonType={'LightLink'} to={'/api-hub'} ></Division>
               <DataSection>             
           
             <SubTitle>{languageState[language].dados.subTitle4}</SubTitle>
-            <br></br>
               <Description>
                 {languageState[language].dados.description4A}
               </Description>
@@ -117,10 +168,17 @@ function Dados(){
                 {languageState[language].dados.description4C}
               </Description>
               <DataPicture src={modelo01}/>
-            <br></br>
-            <br></br>                                                              
           </DataSection>
         </DataPageContentContainer>
+        :
+            <APIPage 
+              title={apiPageProps.apiName} 
+              apiNumber={apiPageProps.apiNumber}
+              apiDescription={apiPageProps.apiDescription}
+              />
+        }
+        </div>
+        
         
       
     );    

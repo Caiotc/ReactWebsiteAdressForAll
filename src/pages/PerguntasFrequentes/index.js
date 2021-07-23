@@ -65,16 +65,16 @@ function PerguntasFrequentes() {
               {languageState[language].perguntasfrequentes.answer1Description4}
             </Description>
 
-            <QandASubtittleItalic>{languageState[language].perguntasfrequentes.question2}</QandASubtittleItalic>
+            <QandASubtittleItalic>
+              {languageState[language].perguntasfrequentes.question2}</QandASubtittleItalic>
             <br></br>
-            <QandADescription>
-            <br></br>
-              <Description>            
+              <QandADescription>            
                 {languageState[language].perguntasfrequentes.answer2Description1}
-              </Description>
-              <Description>            
+              </QandADescription>
+              <QandADescription>            
                 {languageState[language].perguntasfrequentes.answer2Description2}
-              </Description>
+              </QandADescription>
+              
                 
             <QandAList>
               <QandAListItem>
@@ -95,7 +95,7 @@ function PerguntasFrequentes() {
             </QandAList>
                         
             {languageState[language].perguntasfrequentes.answer2Description6}
-            </QandADescription>
+            
 
             <QandASubtittleItalic>{languageState[language].perguntasfrequentes.question3}</QandASubtittleItalic>
             <br></br>

@@ -58,7 +58,7 @@ function Home() {
           <DarkBlueButton onClick={toggleModal}>{languageState[language].homepage.button1}</DarkBlueButton>
         </SectionContent>
         <SectionContent>
-          <Play src={player} alt={'Vídeo'}/>
+          <Play src={player} alt={'Vídeo'} onClick={toggleModal}/>
         </SectionContent>
       </HomeSection>
       

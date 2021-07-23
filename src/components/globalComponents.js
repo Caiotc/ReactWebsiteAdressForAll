@@ -7,6 +7,10 @@ export const Title = styled.h1`
     line-height: 100px;
     color: #000;
     margin-bottom: 50px;
+    @media screen and (max-width: 960px) {        
+        font-size: 2em;
+  }
+
 `;
 
 export const SubTitle = styled.h1`
@@ -19,16 +23,21 @@ export const SubTitle = styled.h1`
 
 export const Description = styled.div`
     font-weight: 400;
-    font-size: 30px;
+    font-size: 2em;
     line-height: 35px;
     color: #544837;
     margin-bottom: 1em;
+    @media screen and (max-width: 960px) {        
+        
+  }
+
 `;
 
 export const DarkBlueButton = styled.button`
     background-color: #0B64E1;
     height: 60px;
     width: 270px;
+    margin-bottom: 1em;
     border:none;
     border-radius: 4px;
     color:#fff;
@@ -44,12 +53,16 @@ export const DarkBlueButton = styled.button`
         transform: translateY(-7px);
         box-shadow: 0px 15px 20px rgba(0, 0, 0, 1);
     }
+    @media screen and (max-width: 960px) {        
+        
+  }
 `;
 
 export const LightBlueButton = styled.button`
     background-color: #3CC5FF;
     height: 60px;
     width: 270px;
+    margin-bottom: 1em;
     border:none;
     border-radius: 4px;
     color:#fff;
@@ -66,6 +79,7 @@ export const LightBlueButton = styled.button`
         box-shadow: 0px 15px 20px rgba(0, 0, 0, 1);
 
     }
+
 `;
 export const Link = styled.a`
     font-weight: 400;
@@ -74,6 +88,13 @@ export const Link = styled.a`
     color: #3CC5FF;
     margin-bottom: 1em;
     text-decoration: underline;
+    :hover{
+        cursor: pointer;
+    }
+    @media screen and (max-width: 960px) {        
+        font-size: 1.4em;
+    }
+    
 `
 export const HilightLigthBlue = styled.p`
     color: #3CC5FF;

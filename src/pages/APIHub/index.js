@@ -48,9 +48,6 @@ function APIHub() {
                   ApiObject.map((item,index) =>{
                     return(
                     <APIHubAnchor onClick={()=>{
-                      console.log('clicado')
-                      console.log(isHub)
-                      console.log(index)
                       setApiPageProps({    
                       apiName:item.title,
                       apiNumber:index,
