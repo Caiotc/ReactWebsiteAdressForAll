@@ -9,6 +9,7 @@ export const Title = styled.h1`
     margin-bottom: 50px;
     @media screen and (max-width: 960px) {        
         font-size: 3em;
+        font-weight: 700;
   }
 
 `;
@@ -21,6 +22,7 @@ export const SubTitle = styled.h1`
     margin-bottom: 25px;
     @media screen and (max-width: 960px) {        
         font-size: 2em;
+        font-weight: 400;
     }
 `;
 
@@ -32,7 +34,9 @@ export const Description = styled.div`
     margin-bottom: 1em;
     text-align:justify;
     @media screen and (max-width: 960px) {        
-        font-size: 2em;
+        font-size: 1.5em;
+        font-weight: 300;
+        text-align: justify;
     }
 
 `;

@@ -34,7 +34,8 @@ function PerguntasFrequentes() {
             <br></br>
             <QandASubtittleItalic>           
               {languageState[language].perguntasfrequentes.question1}
-            </QandASubtittleItalic>                    
+            </QandASubtittleItalic>   
+            <br></br>                 
             <Description>
               {languageState[language].perguntasfrequentes.answer1} 
             </Description>

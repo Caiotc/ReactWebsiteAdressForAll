@@ -16,6 +16,9 @@ export const QandASubtittleItalic = styled.h1`
     font-size: 30px;
     line-height: 40px;
     color: #544837;
+    @media screen and (max-width: 960px) {        
+        font-size: 25px;
+    }
 `
 export const QandASubtittleNormal = styled.h1`
     font-style: normal;
@@ -31,7 +34,7 @@ export const QandADescription = styled.p`
     color: #544837;
     margin-bottom: 1em;
     @media screen and (max-width: 960px) {        
-        font-size: 1.5em;
+        font-size: 20px;
     }
 `;
 
@@ -45,5 +48,8 @@ export const QandAListItem = styled.li`
 export const QandAAnchor = styled.a`
     text-decoration: none;
     color: #3CC5FF;
+    @media screen and (max-width: 960px) {        
+        text-align: justify;
+    }
 
 `
