@@ -1,5 +1,9 @@
+import React, {useState,useEffect} from 'react'
+
 import {useLanguage} from '../../context/language';
 import {useLanguageState} from '../../context/languageState';
+
+import WindowDimensions from '../../utils/WindowDimensions'
 
 import Carousel from 'react-elastic-carousel'
 
@@ -29,10 +33,22 @@ import logo from '../../assets/images/logo.png'
 
 
 
+
 function QuemSomos() {
+
+  const { width } = WindowDimensions();
+
+  const [carouselQuant,setCarouselQuant] = useState(4);
 
   const {language} = useLanguage();
   const {languageState} = useLanguageState();
+
+  useEffect(()=>{
+    if(width<960){
+      setCarouselQuant(1);
+    };
+  },[]);
+
   
   return (  
     <PageBodyContainer> 
@@ -70,13 +86,26 @@ function QuemSomos() {
         <Description>
           {languageState[language].quemsomos.description3}
         </Description>
-      <ImgContainer>
-          <MemberImg src={logo} alt={'Diretoria'}/>
-          <MemberImg src={logo} alt={'Diretoria'}/>
-          <MemberImg src={logo} alt={'Diretoria'}/>
-          <MemberImg src={logo} alt={'Diretoria'}/>
-          <MemberImg src={logo} alt={'Diretoria'}/>
-        </ImgContainer>
+
+        {carouselQuant===1?(
+            <Carousel itemsToShow={carouselQuant} pagination={false} style={{marginTop:'30px'}}>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+            </Carousel> 
+          ):(
+            <ImgContainer>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+            </ImgContainer>
+          )
+        }
+
       </WhoWeAreSection>
       
       <WhoWeAreSection>
@@ -85,11 +114,22 @@ function QuemSomos() {
         <Description>
           {languageState[language].quemsomos.description4}
         </Description>
-        <ImgContainer>
-          <MemberImg src={logo} alt={'Diretoria'}/>
-          <MemberImg src={logo} alt={'Diretoria'}/>
-          <MemberImg src={logo} alt={'Diretoria'}/>
-        </ImgContainer>
+
+        {carouselQuant===1?(
+            <Carousel itemsToShow={carouselQuant} pagination={false} style={{marginTop:'30px'}}>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+            </Carousel> 
+          ):(
+            <ImgContainer>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+            </ImgContainer>
+          )
+        }
+
       </WhoWeAreSection>
       
       <WhoWeAreSection>
@@ -98,18 +138,27 @@ function QuemSomos() {
         <Description>
           {languageState[language].quemsomos.description5}
         </Description>
-        <ImgContainer>
-          <MemberImg src={logo} alt={'Diretoria'}/>
-          <MemberImg src={logo} alt={'Diretoria'}/>
-          <MemberImg src={logo} alt={'Diretoria'}/>
-          <MemberImg src={logo} alt={'Diretoria'}/>
-          <MemberImg src={logo} alt={'Diretoria'}/>
-        </ImgContainer>
+
+        {carouselQuant===1?(
+            <Carousel itemsToShow={carouselQuant} pagination={false} style={{marginTop:'30px'}}>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+            </Carousel> 
+          ):(
+            <ImgContainer>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+              <MemberImg src={logo} alt={'Diretoria'}/>
+            </ImgContainer>
+          )
+        }
+
       </WhoWeAreSection>
       
       <WhoWeAreSection>
         <SubTitle>{languageState[language].quemsomos.subTitle6}</SubTitle>
-        <Carousel itemsToShow={4} pagination={false} style={{marginTop:'30px'}}>
+        <Carousel itemsToShow={carouselQuant} pagination={false} style={{marginTop:'30px'}}>
           <PartnerImg src={logo} alt={'Parceiro'}/>
           <PartnerImg src={logo} alt={'Parceiro'}/>
           <PartnerImg src={logo} alt={'Parceiro'}/>
@@ -126,38 +175,77 @@ function QuemSomos() {
         <Description>
           {languageState[language].quemsomos.description7}
         </Description>
-        <ProjectCardsContainer>
-          <ProjectCard>
-            <ProjectImg src={logo} alt={'Parceiro'}/>
-            <ProjectTitle>{languageState[language].quemsomos.project1Title}</ProjectTitle>
-            <ProjectDescription>{languageState[language].quemsomos.project1Description}</ProjectDescription>
-            <ProjectButton href={'/'}>{languageState[language].quemsomos.project1Button}</ProjectButton>
-          </ProjectCard>
-          <ProjectCard>
-            <ProjectImg src={logo} alt={'Parceiro'}/>
-            <ProjectTitle>{languageState[language].quemsomos.project2Title}</ProjectTitle>
-            <ProjectDescription>{languageState[language].quemsomos.project2Description}</ProjectDescription>
-            <ProjectButton href={'#'}>{languageState[language].quemsomos.project2Button}</ProjectButton>
-          </ProjectCard>
-          <ProjectCard>
-              <ProjectImg src={logo} alt={'Parceiro'}/>
-              <ProjectTitle>{languageState[language].quemsomos.project3Title}</ProjectTitle>
-            <ProjectDescription>{languageState[language].quemsomos.project3Description}</ProjectDescription>
-            <ProjectButton href={'#'}>{languageState[language].quemsomos.project3Button}</ProjectButton>
-          </ProjectCard>
-          <ProjectCard>
-            <ProjectImg src={logo} alt={'Parceiro'}/>
-            <ProjectTitle>{languageState[language].quemsomos.project4Title}</ProjectTitle>
-            <ProjectDescription>{languageState[language].quemsomos.project4Description}</ProjectDescription>
-            <ProjectButton href={'#'}>{languageState[language].quemsomos.project4Button}</ProjectButton>
-          </ProjectCard>
-          <ProjectCard>
-            <ProjectImg src={logo} alt={'Parceiro'}/>
-            <ProjectTitle>{languageState[language].quemsomos.project5Title}</ProjectTitle>
-            <ProjectDescription>{languageState[language].quemsomos.project5Description}</ProjectDescription>
-            <ProjectButton href={'#'}>{languageState[language].quemsomos.project5Button}</ProjectButton>
-          </ProjectCard>
-        </ProjectCardsContainer>
+
+        
+        {carouselQuant===1?(
+            <Carousel itemsToShow={carouselQuant} pagination={false} style={{marginTop:'30px'}}>
+              <ProjectCard>
+                <ProjectImg src={logo} alt={'Parceiro'}/>
+                <ProjectTitle>{languageState[language].quemsomos.project1Title}</ProjectTitle>
+                <ProjectDescription>{languageState[language].quemsomos.project1Description}</ProjectDescription>
+                <ProjectButton href={'/'}>{languageState[language].quemsomos.project1Button}</ProjectButton>
+              </ProjectCard>
+              <ProjectCard>
+                <ProjectImg src={logo} alt={'Parceiro'}/>
+                <ProjectTitle>{languageState[language].quemsomos.project2Title}</ProjectTitle>
+                <ProjectDescription>{languageState[language].quemsomos.project2Description}</ProjectDescription>
+                <ProjectButton href={'#'}>{languageState[language].quemsomos.project2Button}</ProjectButton>
+              </ProjectCard>
+              <ProjectCard>
+                  <ProjectImg src={logo} alt={'Parceiro'}/>
+                  <ProjectTitle>{languageState[language].quemsomos.project3Title}</ProjectTitle>
+                <ProjectDescription>{languageState[language].quemsomos.project3Description}</ProjectDescription>
+                <ProjectButton href={'#'}>{languageState[language].quemsomos.project3Button}</ProjectButton>
+              </ProjectCard>
+              <ProjectCard>
+                <ProjectImg src={logo} alt={'Parceiro'}/>
+                <ProjectTitle>{languageState[language].quemsomos.project4Title}</ProjectTitle>
+                <ProjectDescription>{languageState[language].quemsomos.project4Description}</ProjectDescription>
+                <ProjectButton href={'#'}>{languageState[language].quemsomos.project4Button}</ProjectButton>
+              </ProjectCard>
+              <ProjectCard>
+                <ProjectImg src={logo} alt={'Parceiro'}/>
+                <ProjectTitle>{languageState[language].quemsomos.project5Title}</ProjectTitle>
+                <ProjectDescription>{languageState[language].quemsomos.project5Description}</ProjectDescription>
+                <ProjectButton href={'#'}>{languageState[language].quemsomos.project5Button}</ProjectButton>
+              </ProjectCard>
+            </Carousel> 
+          ):(
+            <ProjectCardsContainer>
+              <ProjectCard>
+                <ProjectImg src={logo} alt={'Parceiro'}/>
+                <ProjectTitle>{languageState[language].quemsomos.project1Title}</ProjectTitle>
+                <ProjectDescription>{languageState[language].quemsomos.project1Description}</ProjectDescription>
+                <ProjectButton href={'/'}>{languageState[language].quemsomos.project1Button}</ProjectButton>
+              </ProjectCard>
+              <ProjectCard>
+                <ProjectImg src={logo} alt={'Parceiro'}/>
+                <ProjectTitle>{languageState[language].quemsomos.project2Title}</ProjectTitle>
+                <ProjectDescription>{languageState[language].quemsomos.project2Description}</ProjectDescription>
+                <ProjectButton href={'#'}>{languageState[language].quemsomos.project2Button}</ProjectButton>
+              </ProjectCard>
+              <ProjectCard>
+                  <ProjectImg src={logo} alt={'Parceiro'}/>
+                  <ProjectTitle>{languageState[language].quemsomos.project3Title}</ProjectTitle>
+                <ProjectDescription>{languageState[language].quemsomos.project3Description}</ProjectDescription>
+                <ProjectButton href={'#'}>{languageState[language].quemsomos.project3Button}</ProjectButton>
+              </ProjectCard>
+              <ProjectCard>
+                <ProjectImg src={logo} alt={'Parceiro'}/>
+                <ProjectTitle>{languageState[language].quemsomos.project4Title}</ProjectTitle>
+                <ProjectDescription>{languageState[language].quemsomos.project4Description}</ProjectDescription>
+                <ProjectButton href={'#'}>{languageState[language].quemsomos.project4Button}</ProjectButton>
+              </ProjectCard>
+              <ProjectCard>
+                <ProjectImg src={logo} alt={'Parceiro'}/>
+                <ProjectTitle>{languageState[language].quemsomos.project5Title}</ProjectTitle>
+                <ProjectDescription>{languageState[language].quemsomos.project5Description}</ProjectDescription>
+                <ProjectButton href={'#'}>{languageState[language].quemsomos.project5Button}</ProjectButton>
+              </ProjectCard>
+            </ProjectCardsContainer>
+          )
+        }
+      
       </WhoWeAreSection>
 
       

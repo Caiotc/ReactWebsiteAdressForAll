@@ -13,6 +13,7 @@ import {
 import {
   PageBodyContainer,
   HomeSection,
+  SectionContent,
   Play,
   PictureContainer,
   Picture,
@@ -51,14 +52,14 @@ function Home() {
         <iframe width="760" height="515" src="https://www.youtube.com/embed/WglOrCDKjeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </ModalGeneric>
       <HomeSection>
-        <div style={{flex:1, display:'flex', flexDirection: 'column', justifyContent: 'space-around',height:'100%'}}>
+        <SectionContent>
           <Title>{languageState[language].homepage.title}</Title>
           <Description>{languageState[language].homepage.descriptionTitle}</Description>
           <DarkBlueButton onClick={toggleModal}>{languageState[language].homepage.button1}</DarkBlueButton>
-        </div>
-        <div style={{flex:1}}>
+        </SectionContent>
+        <SectionContent>
           <Play src={player} alt={'Vídeo'}/>
-        </div>
+        </SectionContent>
       </HomeSection>
       
       <LocationsSection>

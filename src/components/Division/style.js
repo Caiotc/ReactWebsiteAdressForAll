@@ -20,6 +20,15 @@ export const DivisionContent = styled.div`
     display: flex;
     justify-content:space-between;
     align-items: center;
+
+    @media(max-width: 960px) {
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
 `;
 
 export const LogoContainer = styled.div`
@@ -37,6 +46,11 @@ export const DivisionInfo = styled.div`
     display:flex;
     flex-direction: column;
     justify-content:space-evenly;
+
+    @media(max-width: 960px) {
+        margin-left: 0px;
+        align-items:center;
+    }
 `;
 
 export const Description = styled.h1`

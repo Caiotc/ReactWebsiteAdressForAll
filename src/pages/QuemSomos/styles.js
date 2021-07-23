@@ -31,6 +31,10 @@ export const MemberImg = styled.img`
     border-radius: 50%;
     background-color: #0B64E1;
     margin-right: 60px;
+
+    @media(max-width: 960px) {
+        margin: 0 10px 0 10px;
+    }
 `;
 
 
@@ -48,11 +52,11 @@ export const ProjectCardsContainer = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 40px;
     width: 100%;
+
 `;
 
 
 export const ProjectCard = styled.div`
-    
     display: flex;
     flex-direction: column;
     width:400px;
@@ -60,6 +64,13 @@ export const ProjectCard = styled.div`
     margin: 10px 0 10px 0;
     overflow-y: hidden;
     overflow-x: hidden;
+
+    @media(max-width: 960px) {
+        height: 600px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
 `;
 
 
@@ -68,6 +79,11 @@ export const ProjectImg = styled.img`
     width: 100%;
     border-radius: 10px;
     background-color: #0B64E1;
+
+    @media(max-width: 960px) {
+        height: 150px;
+    }
+
 `;
 
 export const ProjectTitle = styled.h1`
