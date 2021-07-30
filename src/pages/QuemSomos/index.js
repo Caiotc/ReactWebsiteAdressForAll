@@ -189,25 +189,25 @@ function QuemSomos() {
                 <ProjectImg src={logo} alt={'Parceiro'}/>
                 <ProjectTitle>{languageState[language].quemsomos.project2Title}</ProjectTitle>
                 <ProjectDescription>{languageState[language].quemsomos.project2Description}</ProjectDescription>
-                <ProjectButton href={'#'}>{languageState[language].quemsomos.project2Button}</ProjectButton>
+                <ProjectButton href={'/crp'}>{languageState[language].quemsomos.project2Button}</ProjectButton>
               </ProjectCard>
               <ProjectCard>
                   <ProjectImg src={logo} alt={'Parceiro'}/>
                   <ProjectTitle>{languageState[language].quemsomos.project3Title}</ProjectTitle>
                 <ProjectDescription>{languageState[language].quemsomos.project3Description}</ProjectDescription>
-                <ProjectButton href={'#'}>{languageState[language].quemsomos.project3Button}</ProjectButton>
+                <ProjectButton href={'osm'}>{languageState[language].quemsomos.project3Button}</ProjectButton>
               </ProjectCard>
               <ProjectCard>
                 <ProjectImg src={logo} alt={'Parceiro'}/>
                 <ProjectTitle>{languageState[language].quemsomos.project4Title}</ProjectTitle>
                 <ProjectDescription>{languageState[language].quemsomos.project4Description}</ProjectDescription>
-                <ProjectButton href={'#'}>{languageState[language].quemsomos.project4Button}</ProjectButton>
+                <ProjectButton href={'/preservacao'}>{languageState[language].quemsomos.project4Button}</ProjectButton>
               </ProjectCard>
               <ProjectCard>
                 <ProjectImg src={logo} alt={'Parceiro'}/>
                 <ProjectTitle>{languageState[language].quemsomos.project5Title}</ProjectTitle>
                 <ProjectDescription>{languageState[language].quemsomos.project5Description}</ProjectDescription>
-                <ProjectButton href={'#'}>{languageState[language].quemsomos.project5Button}</ProjectButton>
+                <ProjectButton href={'/geodigital'}>{languageState[language].quemsomos.project5Button}</ProjectButton>
               </ProjectCard>
             </Carousel> 
           ):(
@@ -222,25 +222,25 @@ function QuemSomos() {
                 <ProjectImg src={logo} alt={'Parceiro'}/>
                 <ProjectTitle>{languageState[language].quemsomos.project2Title}</ProjectTitle>
                 <ProjectDescription>{languageState[language].quemsomos.project2Description}</ProjectDescription>
-                <ProjectButton href={'#'}>{languageState[language].quemsomos.project2Button}</ProjectButton>
+                <ProjectButton href={'/crp'}>{languageState[language].quemsomos.project2Button}</ProjectButton>
               </ProjectCard>
               <ProjectCard>
                   <ProjectImg src={logo} alt={'Parceiro'}/>
                   <ProjectTitle>{languageState[language].quemsomos.project3Title}</ProjectTitle>
                 <ProjectDescription>{languageState[language].quemsomos.project3Description}</ProjectDescription>
-                <ProjectButton href={'#'}>{languageState[language].quemsomos.project3Button}</ProjectButton>
+                <ProjectButton href={'/osm'}>{languageState[language].quemsomos.project3Button}</ProjectButton>
               </ProjectCard>
               <ProjectCard>
                 <ProjectImg src={logo} alt={'Parceiro'}/>
                 <ProjectTitle>{languageState[language].quemsomos.project4Title}</ProjectTitle>
                 <ProjectDescription>{languageState[language].quemsomos.project4Description}</ProjectDescription>
-                <ProjectButton href={'#'}>{languageState[language].quemsomos.project4Button}</ProjectButton>
+                <ProjectButton href={'/preservacao'}>{languageState[language].quemsomos.project4Button}</ProjectButton>
               </ProjectCard>
               <ProjectCard>
                 <ProjectImg src={logo} alt={'Parceiro'}/>
                 <ProjectTitle>{languageState[language].quemsomos.project5Title}</ProjectTitle>
                 <ProjectDescription>{languageState[language].quemsomos.project5Description}</ProjectDescription>
-                <ProjectButton href={'#'}>{languageState[language].quemsomos.project5Button}</ProjectButton>
+                <ProjectButton href={'/geodigital'}>{languageState[language].quemsomos.project5Button}</ProjectButton>
               </ProjectCard>
             </ProjectCardsContainer>
           )
